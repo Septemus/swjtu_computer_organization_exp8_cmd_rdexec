@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="exp8">
+		<CBX_INST_ENTRY INSTANCE_NAME="|exp8|LPM_ROM:inst|altrom:srom|altsyncram:rom_block" CBX_FILE_NAME="altsyncram_luv.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
