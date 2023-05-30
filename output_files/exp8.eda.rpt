@@ -1,5 +1,5 @@
 EDA Netlist Writer report for exp8
-Mon May 29 10:25:52 2023
+Mon May 29 12:07:58 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon May 29 10:25:52 2023 ;
+; EDA Netlist Writer Status ; Successful - Mon May 29 12:07:58 2023 ;
 ; Revision Name             ; exp8                                  ;
 ; Top-level Entity Name     ; exp8                                  ;
 ; Family                    ; Cyclone III                           ;
@@ -44,42 +44,34 @@ applicable agreement for further details.
 +---------------------------+---------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Simulation Settings                                                                                                        ;
-+---------------------------------------------------------------------------------------------------+------------------------+
-; Option                                                                                            ; Setting                ;
-+---------------------------------------------------------------------------------------------------+------------------------+
-; Tool Name                                                                                         ; ModelSim-Altera (VHDL) ;
-; Generate netlist for functional simulation only                                                   ; Off                    ;
-; Time scale                                                                                        ; 1 ps                   ;
-; Truncate long hierarchy paths                                                                     ; Off                    ;
-; Map illegal HDL characters                                                                        ; Off                    ;
-; Flatten buses into individual nodes                                                               ; Off                    ;
-; Maintain hierarchy                                                                                ; Off                    ;
-; Bring out device-wide set/reset signals as ports                                                  ; Off                    ;
-; Enable glitch filtering                                                                           ; Off                    ;
-; Do not write top level VHDL entity                                                                ; Off                    ;
-; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                    ;
-; Architecture name in VHDL output netlist                                                          ; structure              ;
-; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                    ;
-; Generate third-party EDA tool command script for gate-level simulation                            ; Off                    ;
-+---------------------------------------------------------------------------------------------------+------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                           ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Option                                                                                            ; Setting                   ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
+; Generate netlist for functional simulation only                                                   ; On                        ;
+; Truncate long hierarchy paths                                                                     ; Off                       ;
+; Map illegal HDL characters                                                                        ; Off                       ;
+; Flatten buses into individual nodes                                                               ; Off                       ;
+; Maintain hierarchy                                                                                ; Off                       ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                       ;
+; Enable glitch filtering                                                                           ; Off                       ;
+; Do not write top level VHDL entity                                                                ; Off                       ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                       ;
+; Architecture name in VHDL output netlist                                                          ; structure                 ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                       ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                       ;
++---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Simulation Generated Files                                                        ;
-+-----------------------------------------------------------------------------------+
-; Generated Files                                                                   ;
-+-----------------------------------------------------------------------------------+
-; C:/Computer_Organization/exp8/simulation/modelsim/exp8_8_1200mv_85c_slow.vho      ;
-; C:/Computer_Organization/exp8/simulation/modelsim/exp8_8_1200mv_0c_slow.vho       ;
-; C:/Computer_Organization/exp8/simulation/modelsim/exp8_min_1200mv_0c_fast.vho     ;
-; C:/Computer_Organization/exp8/simulation/modelsim/exp8.vho                        ;
-; C:/Computer_Organization/exp8/simulation/modelsim/exp8_8_1200mv_85c_vhd_slow.sdo  ;
-; C:/Computer_Organization/exp8/simulation/modelsim/exp8_8_1200mv_0c_vhd_slow.sdo   ;
-; C:/Computer_Organization/exp8/simulation/modelsim/exp8_min_1200mv_0c_vhd_fast.sdo ;
-; C:/Computer_Organization/exp8/simulation/modelsim/exp8_vhd.sdo                    ;
-+-----------------------------------------------------------------------------------+
++--------------------------------------------------------+
+; Simulation Generated Files                             ;
++--------------------------------------------------------+
+; Generated Files                                        ;
++--------------------------------------------------------+
+; C:/Computer_Organization/exp8/simulation/qsim//exp8.vo ;
++--------------------------------------------------------+
 
 
 +-----------------------------+
@@ -88,20 +80,26 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
-    Info: Processing started: Mon May 29 10:25:49 2023
-Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off exp8 -c exp8
-Info (204019): Generated file exp8_8_1200mv_85c_slow.vho in folder "C:/Computer_Organization/exp8/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file exp8_8_1200mv_0c_slow.vho in folder "C:/Computer_Organization/exp8/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file exp8_min_1200mv_0c_fast.vho in folder "C:/Computer_Organization/exp8/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file exp8.vho in folder "C:/Computer_Organization/exp8/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file exp8_8_1200mv_85c_vhd_slow.sdo in folder "C:/Computer_Organization/exp8/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file exp8_8_1200mv_0c_vhd_slow.sdo in folder "C:/Computer_Organization/exp8/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file exp8_min_1200mv_0c_vhd_fast.sdo in folder "C:/Computer_Organization/exp8/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file exp8_vhd.sdo in folder "C:/Computer_Organization/exp8/simulation/modelsim/" for EDA simulation tool
+    Info: Copyright (C) 1991-2013 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Mon May 29 12:07:56 2023
+Info: Command: quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Computer_Organization/exp8/simulation/qsim/ exp8 -c exp8
+Info (204019): Generated file exp8.vo in folder "C:/Computer_Organization/exp8/simulation/qsim//" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4574 megabytes
-    Info: Processing ended: Mon May 29 10:25:52 2023
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4562 megabytes
+    Info: Processing ended: Mon May 29 12:07:58 2023
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

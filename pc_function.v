@@ -1,5 +1,9 @@
 module pc_function(input clk,input pc_clr,input manual_plus,input [7:0]DATA_INPUT,input [1:0]M,output reg[7:0]PC
 );
+initial
+begin
+	PC<=8'hff;
+end
 wire [31:0] second_counter;
 count_second cs (clk,second_counter);
 always@(negedge clk or negedge pc_clr)
@@ -8,6 +12,10 @@ always@(negedge clk or negedge pc_clr)
 		begin
 			PC<=8'h00;
 		end
+//		else if(!manual_plus)
+//		begin
+//			PC<=PC+1;
+//		end
 		else if(!clk)
 		begin
 			case(M)
@@ -21,8 +29,7 @@ always@(negedge clk or negedge pc_clr)
 				end
 				2'b10:
 					begin
-						if(!manual_plus) PC<=PC+1;
-						else PC<=PC;
+						PC<=PC;
 					end
 				2'b11:
 					begin 
