@@ -1,5 +1,5 @@
 Analysis & Synthesis report for exp8
-Mon May 29 12:06:55 2023
+Tue May 30 14:52:11 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -19,7 +19,7 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Source assignments for LPM_ROM:inst|altrom:srom|altsyncram:rom_block|altsyncram_luv:auto_generated
  13. Parameter Settings for User Entity Instance: LPM_ROM:inst
- 14. Port Connectivity Checks: "exp5:inst1|reg_function:rf"
+ 14. Port Connectivity Checks: "exp5:inst2|reg_function:rf"
  15. Elapsed Time Per Partition
  16. Analysis & Synthesis Messages
  17. Analysis & Synthesis Suppressed Messages
@@ -48,16 +48,16 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 29 12:06:55 2023       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 30 14:52:11 2023       ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
 ; Revision Name                      ; exp8                                        ;
 ; Top-level Entity Name              ; exp8                                        ;
 ; Family                             ; Cyclone III                                 ;
-; Total logic elements               ; 207                                         ;
-;     Total combinational functions  ; 189                                         ;
-;     Dedicated logic registers      ; 120                                         ;
-; Total registers                    ; 120                                         ;
-; Total pins                         ; 58                                          ;
+; Total logic elements               ; 142                                         ;
+;     Total combinational functions  ; 124                                         ;
+;     Dedicated logic registers      ; 88                                          ;
+; Total registers                    ; 88                                          ;
+; Total pins                         ; 85                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 2,560                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -161,12 +161,11 @@ applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ; < 0.1%      ;
-;     Processors 3-8         ;   0.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -177,7 +176,6 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------+---------+
 ; exp8.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Computer_Organization/exp8/exp8.bdf                               ;         ;
 ; pc_function.v                    ; yes             ; User Verilog HDL File              ; C:/Computer_Organization/exp8/pc_function.v                          ;         ;
-; count_second.v                   ; yes             ; User Verilog HDL File              ; C:/Computer_Organization/exp8/count_second.v                         ;         ;
 ; choose_opts.v                    ; yes             ; User Verilog HDL File              ; C:/Computer_Organization/exp8/choose_opts.v                          ;         ;
 ; exp5.v                           ; yes             ; User Verilog HDL File              ; C:/Computer_Organization/exp8/exp5.v                                 ;         ;
 ; reg_function.v                   ; yes             ; User Verilog HDL File              ; C:/Computer_Organization/exp8/reg_function.v                         ;         ;
@@ -208,29 +206,29 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 207       ;
+; Estimated Total logic elements              ; 142       ;
 ;                                             ;           ;
-; Total combinational functions               ; 189       ;
+; Total combinational functions               ; 124       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 71        ;
-;     -- 3 input functions                    ; 56        ;
-;     -- <=2 input functions                  ; 62        ;
+;     -- 4 input functions                    ; 77        ;
+;     -- 3 input functions                    ; 22        ;
+;     -- <=2 input functions                  ; 25        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 144       ;
-;     -- arithmetic mode                      ; 45        ;
+;     -- normal mode                          ; 117       ;
+;     -- arithmetic mode                      ; 7         ;
 ;                                             ;           ;
-; Total registers                             ; 120       ;
-;     -- Dedicated logic registers            ; 120       ;
+; Total registers                             ; 88        ;
+;     -- Dedicated logic registers            ; 88        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 58        ;
+; I/O pins                                    ; 85        ;
 ; Total memory bits                           ; 2560      ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 130       ;
-; Total fan-out                               ; 1072      ;
-; Average fan-out                             ; 2.46      ;
+; Maximum fan-out                             ; 90        ;
+; Total fan-out                               ; 902       ;
+; Average fan-out                             ; 2.30      ;
 +---------------------------------------------+-----------+
 
 
@@ -239,16 +237,15 @@ applicable agreement for further details.
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Library Name ;
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
-; |exp8                                       ; 189 (0)           ; 120 (0)      ; 2560        ; 0            ; 0       ; 0         ; 58   ; 0            ; |exp8                                                                             ; work         ;
+; |exp8                                       ; 124 (0)           ; 88 (0)       ; 2560        ; 0            ; 0       ; 0         ; 85   ; 0            ; |exp8                                                                             ; work         ;
 ;    |choose_opts:inst7|                      ; 32 (32)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp8|choose_opts:inst7                                                           ; work         ;
 ;    |execute:inst8|                          ; 7 (7)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp8|execute:inst8                                                               ; work         ;
 ;    |exp4:inst6|                             ; 22 (0)            ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp8|exp4:inst6                                                                  ; work         ;
 ;       |manipulate:man|                      ; 22 (22)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp8|exp4:inst6|manipulate:man                                                   ; work         ;
 ;       |midware:mw|                          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp8|exp4:inst6|midware:mw                                                       ; work         ;
-;    |exp5:inst1|                             ; 128 (0)           ; 72 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp8|exp5:inst1                                                                  ; work         ;
-;       |pc_function:pf|                      ; 84 (41)           ; 40 (8)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp8|exp5:inst1|pc_function:pf                                                   ; work         ;
-;          |count_second:cs|                  ; 43 (43)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp8|exp5:inst1|pc_function:pf|count_second:cs                                   ; work         ;
-;       |reg_function:rf|                     ; 44 (44)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp8|exp5:inst1|reg_function:rf                                                  ; work         ;
+;    |exp5:inst2|                             ; 63 (0)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp8|exp5:inst2                                                                  ; work         ;
+;       |pc_function:pf|                      ; 18 (18)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp8|exp5:inst2|pc_function:pf                                                   ; work         ;
+;       |reg_function:rf|                     ; 45 (45)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp8|exp5:inst2|reg_function:rf                                                  ; work         ;
 ;    |lpm_rom:inst|                           ; 0 (0)             ; 0 (0)        ; 2560        ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp8|lpm_rom:inst                                                                ; work         ;
 ;       |altrom:srom|                         ; 0 (0)             ; 0 (0)        ; 2560        ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp8|lpm_rom:inst|altrom:srom                                                    ; work         ;
 ;          |altsyncram:rom_block|             ; 0 (0)             ; 0 (0)        ; 2560        ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp8|lpm_rom:inst|altrom:srom|altsyncram:rom_block                               ; work         ;
@@ -281,12 +278,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 120   ;
+; Total registers                              ; 88    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 7     ;
 ; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 48    ;
+; Number of registers using Clock Enable       ; 40    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -296,15 +293,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |exp8|exp4:inst6|manipulate:man|ans[0] ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |exp8|choose_opts:inst7|opt2[0]        ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |exp8|exp4:inst6|manipulate:man|ans[6] ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |exp8|choose_opts:inst7|opt1[1]        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |exp8|choose_opts:inst7|opt2[7]        ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |exp8|execute:inst8|res_dest[0]        ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |exp8|exp5:inst1|reg_function:rf|R1[0] ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |exp8|exp5:inst1|reg_function:rf|R2[0] ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |exp8|exp5:inst1|reg_function:rf|R3[7] ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |exp8|exp5:inst1|reg_function:rf|R0[2] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |exp8|exp5:inst1|pc_function:pf|PC[7]  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |exp8|exp5:inst2|reg_function:rf|R1[1] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |exp8|exp5:inst2|reg_function:rf|R2[7] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |exp8|exp5:inst2|reg_function:rf|R3[7] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |exp8|exp5:inst2|reg_function:rf|R0[0] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 
 
@@ -338,7 +334,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "exp5:inst1|reg_function:rf"                                                         ;
+; Port Connectivity Checks: "exp5:inst2|reg_function:rf"                                                         ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -361,7 +357,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
-    Info: Processing started: Mon May 29 12:06:51 2023
+    Info: Processing started: Tue May 30 14:52:08 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off exp8 -c exp8
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file exp8.bdf
@@ -392,13 +388,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file keymodu
     Info (12023): Found entity 1: keymodule
 Info (12127): Elaborating entity "exp8" for the top level hierarchy
 Warning (275006): Can't find a definition for parameter LPM_FILE -- assuming mem.mif was intended to be a quoted string
-Info (12128): Elaborating entity "exp5" for hierarchy "exp5:inst1"
-Info (12128): Elaborating entity "pc_function" for hierarchy "exp5:inst1|pc_function:pf"
-Warning (10230): Verilog HDL assignment warning at pc_function.v(13): truncated value with size 32 to match size of target (8)
-Warning (10230): Verilog HDL assignment warning at pc_function.v(24): truncated value with size 32 to match size of target (8)
-Warning (10230): Verilog HDL assignment warning at pc_function.v(28): truncated value with size 32 to match size of target (8)
-Info (12128): Elaborating entity "count_second" for hierarchy "exp5:inst1|pc_function:pf|count_second:cs"
-Info (12128): Elaborating entity "reg_function" for hierarchy "exp5:inst1|reg_function:rf"
 Info (12128): Elaborating entity "exp4" for hierarchy "exp4:inst6"
 Info (12128): Elaborating entity "midware" for hierarchy "exp4:inst6|midware:mw"
 Info (12128): Elaborating entity "manipulate" for hierarchy "exp4:inst6|manipulate:man"
@@ -421,6 +410,10 @@ Info (12131): Elaborated megafunction instantiation "LPM_ROM:inst|altrom:srom|al
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_luv.tdf
     Info (12023): Found entity 1: altsyncram_luv
 Info (12128): Elaborating entity "altsyncram_luv" for hierarchy "LPM_ROM:inst|altrom:srom|altsyncram:rom_block|altsyncram_luv:auto_generated"
+Info (12128): Elaborating entity "exp5" for hierarchy "exp5:inst2"
+Info (12128): Elaborating entity "pc_function" for hierarchy "exp5:inst2|pc_function:pf"
+Warning (10230): Verilog HDL assignment warning at pc_function.v(49): truncated value with size 32 to match size of target (8)
+Info (12128): Elaborating entity "reg_function" for hierarchy "exp5:inst2|reg_function:rf"
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
         Warning (14320): Synthesized away node "lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_luv:auto_generated|q_a[0]"
@@ -440,32 +433,33 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13049): Converted tri-state buffer "lpm_rom:inst|otri[8]" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "lpm_rom:inst|otri[7]" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "lpm_rom:inst|otri[6]" feeding internal logic into a wire
-Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "exp5:inst1|pc_function:pf|PC[7]" is converted into an equivalent circuit using register "exp5:inst1|pc_function:pf|PC[7]~_emulated" and latch "exp5:inst1|pc_function:pf|PC[7]~1"
-    Warning (13310): Register "exp5:inst1|pc_function:pf|PC[6]" is converted into an equivalent circuit using register "exp5:inst1|pc_function:pf|PC[6]~_emulated" and latch "exp5:inst1|pc_function:pf|PC[6]~5"
-    Warning (13310): Register "exp5:inst1|pc_function:pf|PC[5]" is converted into an equivalent circuit using register "exp5:inst1|pc_function:pf|PC[5]~_emulated" and latch "exp5:inst1|pc_function:pf|PC[5]~9"
-    Warning (13310): Register "exp5:inst1|pc_function:pf|PC[4]" is converted into an equivalent circuit using register "exp5:inst1|pc_function:pf|PC[4]~_emulated" and latch "exp5:inst1|pc_function:pf|PC[4]~13"
-    Warning (13310): Register "exp5:inst1|pc_function:pf|PC[3]" is converted into an equivalent circuit using register "exp5:inst1|pc_function:pf|PC[3]~_emulated" and latch "exp5:inst1|pc_function:pf|PC[3]~17"
-    Warning (13310): Register "exp5:inst1|pc_function:pf|PC[2]" is converted into an equivalent circuit using register "exp5:inst1|pc_function:pf|PC[2]~_emulated" and latch "exp5:inst1|pc_function:pf|PC[2]~21"
-    Warning (13310): Register "exp5:inst1|pc_function:pf|PC[1]" is converted into an equivalent circuit using register "exp5:inst1|pc_function:pf|PC[1]~_emulated" and latch "exp5:inst1|pc_function:pf|PC[1]~25"
-    Warning (13310): Register "exp5:inst1|pc_function:pf|PC[0]" is converted into an equivalent circuit using register "exp5:inst1|pc_function:pf|PC[0]~_emulated" and latch "exp5:inst1|pc_function:pf|PC[0]~29"
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register exp5:inst2|pc_function:pf|PC[7] will power up to Low
+    Critical Warning (18010): Register exp5:inst2|pc_function:pf|PC[6] will power up to Low
+    Critical Warning (18010): Register exp5:inst2|pc_function:pf|PC[5] will power up to Low
+    Critical Warning (18010): Register exp5:inst2|pc_function:pf|PC[4] will power up to Low
+    Critical Warning (18010): Register exp5:inst2|pc_function:pf|PC[3] will power up to Low
+    Critical Warning (18010): Register exp5:inst2|pc_function:pf|PC[2] will power up to Low
+    Critical Warning (18010): Register exp5:inst2|pc_function:pf|PC[1] will power up to Low
+    Critical Warning (18010): Register exp5:inst2|pc_function:pf|PC[0] will power up to Low
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Computer_Organization/exp8/output_files/exp8.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "manual_plus"
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "cin"
-Info (21057): Implemented 277 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 18 input pins
-    Info (21059): Implemented 40 output pins
-    Info (21061): Implemented 209 logic cells
+    Warning (15610): No output dependent on input pin "M[1]"
+    Warning (15610): No output dependent on input pin "M[0]"
+Info (21057): Implemented 239 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
+    Info (21059): Implemented 66 output pins
+    Info (21061): Implemented 144 logic cells
     Info (21064): Implemented 10 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 36 warnings
-    Info: Peak virtual memory: 4673 megabytes
-    Info: Processing ended: Mon May 29 12:06:55 2023
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 35 warnings
+    Info: Peak virtual memory: 4674 megabytes
+    Info: Processing ended: Tue May 30 14:52:11 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 
 +------------------------------------------+

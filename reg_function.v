@@ -10,7 +10,8 @@ module reg_function(
 	output reg[7:0]R3,
 	output reg[7:0]X,
 	input [7:0] res_alu,
-	input [1:0] res_dest
+	input [1:0] res_dest,
+	input enact
 );
 always@(negedge clk)
 	begin
@@ -18,7 +19,7 @@ always@(negedge clk)
 				2'b00:
 				begin
 					X<=R0;
-					if(res_dest==2'b00)
+					if(res_dest==2'b00&&!enact)
 					begin
 						R0<=res_alu;
 					end
@@ -34,7 +35,7 @@ always@(negedge clk)
 				2'b01:
 				begin
 					X<=R1;
-					if(res_dest==2'b01)
+					if(res_dest==2'b01&&!enact)
 					begin
 						R1<=res_alu;
 					end
@@ -50,7 +51,7 @@ always@(negedge clk)
 				2'b10:
 				begin
 					X<=R2;
-					if(res_dest==2'b10)
+					if(res_dest==2'b10&&!enact)
 					begin
 						R2<=res_alu;
 					end
@@ -66,7 +67,7 @@ always@(negedge clk)
 				2'b11:
 				begin
 					X<=R3;
-					if(res_dest==2'b11)
+					if(res_dest==2'b11&&!enact)
 					begin
 						R3<=res_alu;
 					end
