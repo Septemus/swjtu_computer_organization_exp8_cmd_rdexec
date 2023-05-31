@@ -1,7 +1,6 @@
 module execute(
 	input clk,
 	input [15:0] order,
-	input manual_plus,
 	output reg[3:0] choose_reg,
 	output reg[2:0] S,
 	output reg[1:0] res_dest

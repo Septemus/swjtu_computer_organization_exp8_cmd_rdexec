@@ -3,39 +3,75 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -6.913
-TNS   : -649.115
+Slack : -6.661
+TNS   : -585.867
+
+Type  : Slow 1200mV 85C Model Setup 'exp5:inst3|pc_function:pf|key_flag'
+Slack : -1.367
+TNS   : -7.322
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.451
+Slack : 0.156
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'exp5:inst3|pc_function:pf|key_flag'
+Slack : 0.464
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.201
-TNS   : -321.445
+TNS   : -305.088
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'exp5:inst3|pc_function:pf|key_flag'
+Slack : -1.487
+TNS   : -11.896
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -6.283
-TNS   : -588.105
+Slack : -6.065
+TNS   : -533.769
+
+Type  : Slow 1200mV 0C Model Setup 'exp5:inst3|pc_function:pf|key_flag'
+Slack : -1.118
+TNS   : -5.922
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.399
+Slack : 0.255
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'exp5:inst3|pc_function:pf|key_flag'
+Slack : 0.415
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.201
-TNS   : -321.445
+TNS   : -305.088
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'exp5:inst3|pc_function:pf|key_flag'
+Slack : -1.487
+TNS   : -11.896
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -2.385
-TNS   : -178.008
+Slack : -2.308
+TNS   : -159.013
+
+Type  : Fast 1200mV 0C Model Setup 'exp5:inst3|pc_function:pf|key_flag'
+Slack : -0.035
+TNS   : -0.035
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.185
+Slack : -0.212
+TNS   : -0.212
+
+Type  : Fast 1200mV 0C Model Hold 'exp5:inst3|pc_function:pf|key_flag'
+Slack : 0.192
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -231.066
+TNS   : -217.718
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'exp5:inst3|pc_function:pf|key_flag'
+Slack : -1.000
+TNS   : -8.000
 
 ------------------------------------------------------------

@@ -1,5 +1,5 @@
 Fitter report for exp8
-Mon May 29 10:25:29 2023
+Wed May 31 09:21:01 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -41,8 +41,10 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
  33. I/O Rules Matrix
  34. Fitter Device Options
  35. Operating Settings and Conditions
- 36. Fitter Messages
- 37. Fitter Suppressed Messages
+ 36. Estimated Delay Added for Hold Timing Summary
+ 37. Estimated Delay Added for Hold Timing Details
+ 38. Fitter Messages
+ 39. Fitter Suppressed Messages
 
 
 
@@ -68,18 +70,18 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon May 29 10:25:29 2023       ;
+; Fitter Status                      ; Successful - Wed May 31 09:21:01 2023       ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
 ; Revision Name                      ; exp8                                        ;
 ; Top-level Entity Name              ; exp8                                        ;
 ; Family                             ; Cyclone III                                 ;
 ; Device                             ; EP3C40F780C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 369 / 39,600 ( < 1 % )                      ;
-;     Total combinational functions  ; 351 / 39,600 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 212 / 39,600 ( < 1 % )                      ;
-; Total registers                    ; 212                                         ;
-; Total pins                         ; 33 / 536 ( 6 % )                            ;
+; Total logic elements               ; 357 / 39,600 ( < 1 % )                      ;
+;     Total combinational functions  ; 339 / 39,600 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 209 / 39,600 ( < 1 % )                      ;
+; Total registers                    ; 209                                         ;
+; Total pins                         ; 34 / 536 ( 6 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096 / 1,161,216 ( < 1 % )                 ;
 ; Embedded Multiplier 9-bit elements ; 0 / 252 ( 0 % )                             ;
@@ -156,12 +158,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.40        ;
+; Average used               ; 1.67        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  13.3%      ;
+;     Processors 2-4         ;  22.2%      ;
 ;     Processors 5-8         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -195,8 +197,8 @@ applicable agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 657 ) ; 0.00 % ( 0 / 657 )         ; 0.00 % ( 0 / 657 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 657 ) ; 0.00 % ( 0 / 657 )         ; 0.00 % ( 0 / 657 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 645 ) ; 0.00 % ( 0 / 645 )         ; 0.00 % ( 0 / 645 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 645 ) ; 0.00 % ( 0 / 645 )         ; 0.00 % ( 0 / 645 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -219,7 +221,7 @@ applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 647 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 635 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -235,48 +237,48 @@ The pin-out file can be found in C:/Computer_Organization/exp8/output_files/exp8
 +---------------------------------------------+-----------------------------+
 ; Resource                                    ; Usage                       ;
 +---------------------------------------------+-----------------------------+
-; Total logic elements                        ; 369 / 39,600 ( < 1 % )      ;
-;     -- Combinational with no register       ; 157                         ;
+; Total logic elements                        ; 357 / 39,600 ( < 1 % )      ;
+;     -- Combinational with no register       ; 148                         ;
 ;     -- Register only                        ; 18                          ;
-;     -- Combinational with a register        ; 194                         ;
+;     -- Combinational with a register        ; 191                         ;
 ;                                             ;                             ;
 ; Logic element usage by number of LUT inputs ;                             ;
-;     -- 4 input functions                    ; 112                         ;
-;     -- 3 input functions                    ; 132                         ;
-;     -- <=2 input functions                  ; 107                         ;
+;     -- 4 input functions                    ; 133                         ;
+;     -- 3 input functions                    ; 113                         ;
+;     -- <=2 input functions                  ; 93                          ;
 ;     -- Register only                        ; 18                          ;
 ;                                             ;                             ;
 ; Logic elements by mode                      ;                             ;
-;     -- normal mode                          ; 282                         ;
-;     -- arithmetic mode                      ; 69                          ;
+;     -- normal mode                          ; 283                         ;
+;     -- arithmetic mode                      ; 56                          ;
 ;                                             ;                             ;
-; Total registers*                            ; 212 / 42,205 ( < 1 % )      ;
-;     -- Dedicated logic registers            ; 212 / 39,600 ( < 1 % )      ;
+; Total registers*                            ; 209 / 42,205 ( < 1 % )      ;
+;     -- Dedicated logic registers            ; 209 / 39,600 ( < 1 % )      ;
 ;     -- I/O registers                        ; 0 / 2,605 ( 0 % )           ;
 ;                                             ;                             ;
-; Total LABs:  partially or completely used   ; 32 / 2,475 ( 1 % )          ;
+; Total LABs:  partially or completely used   ; 31 / 2,475 ( 1 % )          ;
 ; Virtual pins                                ; 0                           ;
-; I/O pins                                    ; 33 / 536 ( 6 % )            ;
+; I/O pins                                    ; 34 / 536 ( 6 % )            ;
 ;     -- Clock pins                           ; 3 / 8 ( 38 % )              ;
 ;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )               ;
 ;                                             ;                             ;
-; Global signals                              ; 1                           ;
+; Global signals                              ; 2                           ;
 ; M9Ks                                        ; 1 / 126 ( < 1 % )           ;
 ; Total block memory bits                     ; 4,096 / 1,161,216 ( < 1 % ) ;
 ; Total block memory implementation bits      ; 9,216 / 1,161,216 ( < 1 % ) ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 252 ( 0 % )             ;
 ; PLLs                                        ; 0 / 4 ( 0 % )               ;
-; Global clocks                               ; 1 / 20 ( 5 % )              ;
+; Global clocks                               ; 2 / 20 ( 10 % )             ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )               ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )               ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )               ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )               ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%                ;
-; Peak interconnect usage (total/H/V)         ; 3% / 3% / 3%                ;
-; Maximum fan-out                             ; 213                         ;
-; Highest non-global fan-out                  ; 35                          ;
-; Total fan-out                               ; 1757                        ;
-; Average fan-out                             ; 2.67                        ;
+; Peak interconnect usage (total/H/V)         ; 4% / 4% / 4%                ;
+; Maximum fan-out                             ; 202                         ;
+; Highest non-global fan-out                  ; 37                          ;
+; Total fan-out                               ; 1781                        ;
+; Average fan-out                             ; 2.76                        ;
 +---------------------------------------------+-----------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -289,34 +291,34 @@ The pin-out file can be found in C:/Computer_Organization/exp8/output_files/exp8
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 369 / 39600 ( < 1 % ) ; 0 / 39600 ( 0 % )              ;
-;     -- Combinational with no register       ; 157                   ; 0                              ;
+; Total logic elements                        ; 357 / 39600 ( < 1 % ) ; 0 / 39600 ( 0 % )              ;
+;     -- Combinational with no register       ; 148                   ; 0                              ;
 ;     -- Register only                        ; 18                    ; 0                              ;
-;     -- Combinational with a register        ; 194                   ; 0                              ;
+;     -- Combinational with a register        ; 191                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 112                   ; 0                              ;
-;     -- 3 input functions                    ; 132                   ; 0                              ;
-;     -- <=2 input functions                  ; 107                   ; 0                              ;
+;     -- 4 input functions                    ; 133                   ; 0                              ;
+;     -- 3 input functions                    ; 113                   ; 0                              ;
+;     -- <=2 input functions                  ; 93                    ; 0                              ;
 ;     -- Register only                        ; 18                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 282                   ; 0                              ;
-;     -- arithmetic mode                      ; 69                    ; 0                              ;
+;     -- normal mode                          ; 283                   ; 0                              ;
+;     -- arithmetic mode                      ; 56                    ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total registers                             ; 212                   ; 0                              ;
-;     -- Dedicated logic registers            ; 212 / 39600 ( < 1 % ) ; 0 / 39600 ( 0 % )              ;
+; Total registers                             ; 209                   ; 0                              ;
+;     -- Dedicated logic registers            ; 209 / 39600 ( < 1 % ) ; 0 / 39600 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 32 / 2475 ( 1 % )     ; 0 / 2475 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 31 / 2475 ( 1 % )     ; 0 / 2475 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
-; I/O pins                                    ; 33                    ; 0                              ;
+; I/O pins                                    ; 34                    ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 252 ( 0 % )       ; 0 / 252 ( 0 % )                ;
 ; Total memory bits                           ; 4096                  ; 0                              ;
 ; Total RAM block bits                        ; 9216                  ; 0                              ;
 ; M9K                                         ; 1 / 126 ( < 1 % )     ; 0 / 126 ( 0 % )                ;
-; Clock control block                         ; 1 / 24 ( 4 % )        ; 0 / 24 ( 0 % )                 ;
+; Clock control block                         ; 2 / 24 ( 8 % )        ; 0 / 24 ( 0 % )                 ;
 ;                                             ;                       ;                                ;
 ; Connections                                 ;                       ;                                ;
 ;     -- Input Connections                    ; 0                     ; 0                              ;
@@ -325,15 +327,15 @@ The pin-out file can be found in C:/Computer_Organization/exp8/output_files/exp8
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 1763                  ; 5                              ;
-;     -- Registered Connections               ; 694                   ; 0                              ;
+;     -- Total Connections                    ; 1787                  ; 5                              ;
+;     -- Registered Connections               ; 722                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 0                              ;
 ;     -- hard_block:auto_generated_inst       ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Partition Interface                         ;                       ;                                ;
-;     -- Input Ports                          ; 18                    ; 0                              ;
+;     -- Input Ports                          ; 19                    ; 0                              ;
 ;     -- Output Ports                         ; 15                    ; 0                              ;
 ;     -- Bidir Ports                          ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
@@ -358,24 +360,25 @@ The pin-out file can be found in C:/Computer_Organization/exp8/output_files/exp8
 +-------------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; Name              ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
 +-------------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
-; M[0]              ; AA8   ; 2        ; 0            ; 12           ; 21           ; 9                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; M[1]              ; AB8   ; 2        ; 0            ; 3            ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; M[0]              ; AA8   ; 2        ; 0            ; 12           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; M[1]              ; AB8   ; 2        ; 0            ; 3            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; RA[0]             ; AH12  ; 3        ; 22           ; 0            ; 0            ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; RA[1]             ; AF14  ; 3        ; 34           ; 0            ; 0            ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; cin               ; AH7   ; 3        ; 16           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; clk               ; A14   ; 8        ; 34           ; 43           ; 14           ; 213                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; clk               ; A14   ; 8        ; 34           ; 43           ; 14           ; 202                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; enact             ; AG10  ; 3        ; 29           ; 0            ; 21           ; 18                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; key_clr           ; AH6   ; 3        ; 14           ; 0            ; 28           ; 22                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; key_r[0]          ; AD11  ; 3        ; 1            ; 0            ; 21           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; key_r[1]          ; AD12  ; 3        ; 1            ; 0            ; 7            ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; key_r[2]          ; AF13  ; 3        ; 27           ; 0            ; 14           ; 9                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; key_r[3]          ; AE14  ; 3        ; 34           ; 0            ; 7            ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; manual_plus       ; AH8   ; 3        ; 20           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; pc_clr            ; AF5   ; 3        ; 7            ; 0            ; 21           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; rd                ; AC5   ; 2        ; 0            ; 2            ; 0            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; pc_clr            ; AF5   ; 3        ; 7            ; 0            ; 21           ; 37                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; rd                ; AC5   ; 2        ; 0            ; 2            ; 0            ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; switch_buttons[0] ; Y27   ; 5        ; 67           ; 22           ; 14           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; switch_buttons[1] ; Y28   ; 5        ; 67           ; 22           ; 21           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; switch_buttons[2] ; J28   ; 6        ; 67           ; 22           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; wr                ; AE4   ; 2        ; 0            ; 2            ; 14           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; wr                ; AE4   ; 2        ; 0            ; 2            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 +-------------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
 
@@ -430,7 +433,7 @@ The pin-out file can be found in C:/Computer_Organization/exp8/output_files/exp8
 +----------+------------------+---------------+--------------+
 ; 1        ; 4 / 61 ( 7 % )   ; 2.5V          ; --           ;
 ; 2        ; 4 / 73 ( 5 % )   ; 2.5V          ; --           ;
-; 3        ; 14 / 65 ( 22 % ) ; 2.5V          ; --           ;
+; 3        ; 15 / 65 ( 23 % ) ; 2.5V          ; --           ;
 ; 4        ; 0 / 67 ( 0 % )   ; 2.5V          ; --           ;
 ; 5        ; 2 / 71 ( 3 % )   ; 2.5V          ; --           ;
 ; 6        ; 3 / 65 ( 5 % )   ; 2.5V          ; --           ;
@@ -647,7 +650,7 @@ The pin-out file can be found in C:/Computer_Organization/exp8/output_files/exp8
 ; AG7      ; 170        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG8      ; 176        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG9      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AG10     ; 192        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AG10     ; 192        ; 3        ; enact                                                     ; input  ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AG11     ; 195        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG12     ; 200        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG13     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1233,16 +1236,15 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                               ; Library Name ;
 +---------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------+--------------+
-; |exp8                                       ; 369 (0)     ; 212 (0)                   ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 33   ; 0            ; 157 (0)      ; 18 (0)            ; 194 (0)          ; |exp8                                                                             ; work         ;
-;    |choose_opts:inst7|                      ; 32 (32)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 16 (16)          ; |exp8|choose_opts:inst7                                                           ; work         ;
-;    |execute:inst8|                          ; 9 (9)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 2 (2)             ; 6 (6)            ; |exp8|execute:inst8                                                               ; work         ;
+; |exp8                                       ; 357 (0)     ; 209 (0)                   ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 34   ; 0            ; 148 (0)      ; 18 (0)            ; 191 (0)          ; |exp8                                                                             ; work         ;
+;    |choose_opts:inst7|                      ; 32 (32)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 15 (15)      ; 0 (0)             ; 17 (17)          ; |exp8|choose_opts:inst7                                                           ; work         ;
+;    |execute:inst4|                          ; 9 (9)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 1 (1)             ; 7 (7)            ; |exp8|execute:inst4                                                               ; work         ;
 ;    |exp4:inst6|                             ; 38 (0)      ; 24 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (0)       ; 16 (0)            ; 8 (0)            ; |exp8|exp4:inst6                                                                  ; work         ;
 ;       |manipulate:man|                      ; 22 (22)     ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 8 (8)            ; |exp8|exp4:inst6|manipulate:man                                                   ; work         ;
 ;       |midware:mw|                          ; 16 (16)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; |exp8|exp4:inst6|midware:mw                                                       ; work         ;
-;    |exp5:inst1|                             ; 106 (0)     ; 72 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 34 (0)       ; 0 (0)             ; 72 (0)           ; |exp8|exp5:inst1                                                                  ; work         ;
-;       |pc_function:pf|                      ; 62 (21)     ; 40 (8)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (13)      ; 0 (0)             ; 40 (8)           ; |exp8|exp5:inst1|pc_function:pf                                                   ; work         ;
-;          |count_second:cs|                  ; 41 (41)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 32 (32)          ; |exp8|exp5:inst1|pc_function:pf|count_second:cs                                   ; work         ;
-;       |reg_function:rf|                     ; 44 (44)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 32 (32)          ; |exp8|exp5:inst1|reg_function:rf                                                  ; work         ;
+;    |exp5:inst3|                             ; 95 (0)      ; 69 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (0)       ; 1 (0)             ; 68 (0)           ; |exp8|exp5:inst3                                                                  ; work         ;
+;       |pc_function:pf|                      ; 51 (51)     ; 37 (37)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (14)      ; 1 (1)             ; 36 (36)          ; |exp8|exp5:inst3|pc_function:pf                                                   ; work         ;
+;       |reg_function:rf|                     ; 44 (44)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 32 (32)          ; |exp8|exp5:inst3|reg_function:rf                                                  ; work         ;
 ;    |keymodule:keyboard|                     ; 118 (118)   ; 51 (51)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 67 (67)      ; 0 (0)             ; 51 (51)          ; |exp8|keymodule:keyboard                                                          ; work         ;
 ;    |lpm_rom:inst|                           ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |exp8|lpm_rom:inst                                                                ; work         ;
 ;       |altrom:srom|                         ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |exp8|lpm_rom:inst|altrom:srom                                                    ; work         ;
@@ -1268,6 +1270,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; codeout[1]        ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; codeout[0]        ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; cin               ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; M[1]              ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; M[0]              ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; key_c[3]          ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; key_c[2]          ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; key_c[1]          ; Output   ; --            ; --            ; --                    ; --  ; --   ;
@@ -1276,170 +1280,201 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sel[1]            ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; sel[0]            ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; clk               ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; key_clr           ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; M[1]              ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; M[0]              ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; pc_clr            ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; manual_plus       ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; wr                ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; key_clr           ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; pc_clr            ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; enact             ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; rd                ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; wr                ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; RA[1]             ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; RA[0]             ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; RA[1]             ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; switch_buttons[1] ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; switch_buttons[0] ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; switch_buttons[2] ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; key_r[3]          ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; key_r[2]          ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; key_r[3]          ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; key_r[2]          ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; key_r[1]          ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; key_r[0]          ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; key_r[0]          ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; manual_plus       ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 +-------------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+-------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                          ;
-+-------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                       ; Pad To Core Index ; Setting ;
-+-------------------------------------------+-------------------+---------+
-; cin                                       ;                   ;         ;
-; clk                                       ;                   ;         ;
-; key_clr                                   ;                   ;         ;
-;      - keymodule:keyboard|KEY_C[0]        ; 1                 ; 6       ;
-;      - keymodule:keyboard|KEY_C[1]        ; 1                 ; 6       ;
-;      - keymodule:keyboard|KEY_C[2]        ; 1                 ; 6       ;
-;      - keymodule:keyboard|KEY_C[3]        ; 1                 ; 6       ;
-;      - keymodule:keyboard|cnt[0]          ; 1                 ; 6       ;
-;      - keymodule:keyboard|cnt[1]~0        ; 1                 ; 6       ;
-;      - keymodule:keyboard|num[0]          ; 1                 ; 6       ;
-;      - keymodule:keyboard|out~0           ; 1                 ; 6       ;
-;      - keymodule:keyboard|num[4]          ; 1                 ; 6       ;
-;      - keymodule:keyboard|num[2]          ; 1                 ; 6       ;
-;      - keymodule:keyboard|num[3]          ; 1                 ; 6       ;
-;      - keymodule:keyboard|num[1]          ; 1                 ; 6       ;
-;      - keymodule:keyboard|count_num[0]    ; 1                 ; 6       ;
-;      - keymodule:keyboard|out[3]~1        ; 1                 ; 6       ;
-;      - keymodule:keyboard|out~2           ; 1                 ; 6       ;
-;      - keymodule:keyboard|out~3           ; 1                 ; 6       ;
-;      - keymodule:keyboard|out~4           ; 1                 ; 6       ;
-;      - keymodule:keyboard|out~5           ; 1                 ; 6       ;
-;      - keymodule:keyboard|out~6           ; 1                 ; 6       ;
-;      - keymodule:keyboard|out~7           ; 1                 ; 6       ;
-;      - keymodule:keyboard|out~8           ; 1                 ; 6       ;
-;      - keymodule:keyboard|count_num[31]~0 ; 1                 ; 6       ;
-; M[1]                                      ;                   ;         ;
-;      - exp5:inst1|pc_function:pf|Add1~0   ; 1                 ; 6       ;
-;      - exp5:inst1|pc_function:pf|PC[1]~26 ; 1                 ; 6       ;
-; M[0]                                      ;                   ;         ;
-;      - exp5:inst1|pc_function:pf|PC[4]~18 ; 0                 ; 6       ;
-;      - exp5:inst1|pc_function:pf|PC[1]~12 ; 0                 ; 6       ;
-;      - exp5:inst1|pc_function:pf|PC[5]~20 ; 0                 ; 6       ;
-;      - exp5:inst1|pc_function:pf|PC[2]~14 ; 0                 ; 6       ;
-;      - exp5:inst1|pc_function:pf|PC[6]~22 ; 0                 ; 6       ;
-;      - exp5:inst1|pc_function:pf|PC[3]~16 ; 0                 ; 6       ;
-;      - exp5:inst1|pc_function:pf|PC[7]~24 ; 0                 ; 6       ;
-;      - exp5:inst1|pc_function:pf|Add1~0   ; 0                 ; 6       ;
-;      - exp5:inst1|pc_function:pf|PC[1]~26 ; 0                 ; 6       ;
-; pc_clr                                    ;                   ;         ;
-;      - exp5:inst1|pc_function:pf|PC[0]    ; 0                 ; 6       ;
-;      - exp5:inst1|pc_function:pf|PC[4]    ; 0                 ; 6       ;
-;      - exp5:inst1|pc_function:pf|PC[1]    ; 0                 ; 6       ;
-;      - exp5:inst1|pc_function:pf|PC[5]    ; 0                 ; 6       ;
-;      - exp5:inst1|pc_function:pf|PC[2]    ; 0                 ; 6       ;
-;      - exp5:inst1|pc_function:pf|PC[6]    ; 0                 ; 6       ;
-;      - exp5:inst1|pc_function:pf|PC[3]    ; 0                 ; 6       ;
-;      - exp5:inst1|pc_function:pf|PC[7]    ; 0                 ; 6       ;
-; manual_plus                               ;                   ;         ;
-;      - exp5:inst1|pc_function:pf|PC[1]~26 ; 0                 ; 6       ;
-; wr                                        ;                   ;         ;
-;      - exp5:inst1|reg_function:rf|R3[7]~0 ; 0                 ; 6       ;
-;      - exp5:inst1|reg_function:rf|R2[1]~0 ; 0                 ; 6       ;
-;      - exp5:inst1|reg_function:rf|R0[3]~0 ; 0                 ; 6       ;
-;      - exp5:inst1|reg_function:rf|R1[4]~0 ; 0                 ; 6       ;
-; rd                                        ;                   ;         ;
-;      - exp5:inst1|reg_function:rf|R3[7]~0 ; 0                 ; 6       ;
-;      - exp5:inst1|reg_function:rf|R3[4]~2 ; 0                 ; 6       ;
-;      - exp5:inst1|reg_function:rf|R2[1]~0 ; 0                 ; 6       ;
-;      - exp5:inst1|reg_function:rf|R2[4]~2 ; 0                 ; 6       ;
-;      - exp5:inst1|reg_function:rf|R0[3]~0 ; 0                 ; 6       ;
-;      - exp5:inst1|reg_function:rf|R0[0]~2 ; 0                 ; 6       ;
-;      - exp5:inst1|reg_function:rf|R1[4]~0 ; 0                 ; 6       ;
-;      - exp5:inst1|reg_function:rf|R1[4]~2 ; 0                 ; 6       ;
-; RA[0]                                     ;                   ;         ;
-;      - exp5:inst1|reg_function:rf|R3[4]~3 ; 1                 ; 6       ;
-;      - exp5:inst1|reg_function:rf|R2[4]~3 ; 1                 ; 6       ;
-;      - exp5:inst1|reg_function:rf|R0[0]~3 ; 1                 ; 6       ;
-;      - exp5:inst1|reg_function:rf|R1[4]~3 ; 1                 ; 6       ;
-; RA[1]                                     ;                   ;         ;
-;      - exp5:inst1|reg_function:rf|R3[4]~2 ; 0                 ; 6       ;
-;      - exp5:inst1|reg_function:rf|R2[4]~2 ; 0                 ; 6       ;
-;      - exp5:inst1|reg_function:rf|R0[0]~2 ; 0                 ; 6       ;
-;      - exp5:inst1|reg_function:rf|R1[4]~2 ; 0                 ; 6       ;
-; switch_buttons[1]                         ;                   ;         ;
-; switch_buttons[0]                         ;                   ;         ;
-; switch_buttons[2]                         ;                   ;         ;
-; key_r[3]                                  ;                   ;         ;
-;      - keymodule:keyboard|num~0           ; 0                 ; 6       ;
-;      - keymodule:keyboard|Equal0~0        ; 0                 ; 6       ;
-;      - keymodule:keyboard|num~3           ; 0                 ; 6       ;
-;      - keymodule:keyboard|num~8           ; 0                 ; 6       ;
-;      - keymodule:keyboard|num~11          ; 0                 ; 6       ;
-;      - keymodule:keyboard|num~15          ; 0                 ; 6       ;
-;      - keymodule:keyboard|num~18          ; 0                 ; 6       ;
-; key_r[2]                                  ;                   ;         ;
-;      - keymodule:keyboard|num~0           ; 0                 ; 6       ;
-;      - keymodule:keyboard|Equal0~0        ; 0                 ; 6       ;
-;      - keymodule:keyboard|num~3           ; 0                 ; 6       ;
-;      - keymodule:keyboard|num~4           ; 0                 ; 6       ;
-;      - keymodule:keyboard|num~8           ; 0                 ; 6       ;
-;      - keymodule:keyboard|num~10          ; 0                 ; 6       ;
-;      - keymodule:keyboard|num~15          ; 0                 ; 6       ;
-;      - keymodule:keyboard|num~17          ; 0                 ; 6       ;
-;      - keymodule:keyboard|num~18          ; 0                 ; 6       ;
-; key_r[1]                                  ;                   ;         ;
-;      - keymodule:keyboard|num~0           ; 0                 ; 6       ;
-;      - keymodule:keyboard|Equal0~0        ; 0                 ; 6       ;
-;      - keymodule:keyboard|num~3           ; 0                 ; 6       ;
-;      - keymodule:keyboard|num~8           ; 0                 ; 6       ;
-;      - keymodule:keyboard|num~10          ; 0                 ; 6       ;
-;      - keymodule:keyboard|num~14          ; 0                 ; 6       ;
-;      - keymodule:keyboard|num~17          ; 0                 ; 6       ;
-; key_r[0]                                  ;                   ;         ;
-;      - keymodule:keyboard|num~0           ; 0                 ; 6       ;
-;      - keymodule:keyboard|Equal0~0        ; 0                 ; 6       ;
-;      - keymodule:keyboard|num~8           ; 0                 ; 6       ;
-+-------------------------------------------+-------------------+---------+
++---------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                            ;
++---------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                         ; Pad To Core Index ; Setting ;
++---------------------------------------------+-------------------+---------+
+; cin                                         ;                   ;         ;
+; M[1]                                        ;                   ;         ;
+; M[0]                                        ;                   ;         ;
+; clk                                         ;                   ;         ;
+; key_clr                                     ;                   ;         ;
+;      - keymodule:keyboard|KEY_C[0]          ; 0                 ; 6       ;
+;      - keymodule:keyboard|KEY_C[1]          ; 0                 ; 6       ;
+;      - keymodule:keyboard|KEY_C[2]          ; 0                 ; 6       ;
+;      - keymodule:keyboard|KEY_C[3]          ; 0                 ; 6       ;
+;      - keymodule:keyboard|cnt[0]            ; 0                 ; 6       ;
+;      - keymodule:keyboard|cnt[1]~0          ; 0                 ; 6       ;
+;      - keymodule:keyboard|num[0]            ; 0                 ; 6       ;
+;      - keymodule:keyboard|out~0             ; 0                 ; 6       ;
+;      - keymodule:keyboard|num[4]            ; 0                 ; 6       ;
+;      - keymodule:keyboard|num[2]            ; 0                 ; 6       ;
+;      - keymodule:keyboard|num[3]            ; 0                 ; 6       ;
+;      - keymodule:keyboard|num[1]            ; 0                 ; 6       ;
+;      - keymodule:keyboard|count_num[0]      ; 0                 ; 6       ;
+;      - keymodule:keyboard|out[6]~1          ; 0                 ; 6       ;
+;      - keymodule:keyboard|out~2             ; 0                 ; 6       ;
+;      - keymodule:keyboard|out~3             ; 0                 ; 6       ;
+;      - keymodule:keyboard|out~4             ; 0                 ; 6       ;
+;      - keymodule:keyboard|out~5             ; 0                 ; 6       ;
+;      - keymodule:keyboard|out~6             ; 0                 ; 6       ;
+;      - keymodule:keyboard|out~7             ; 0                 ; 6       ;
+;      - keymodule:keyboard|out~8             ; 0                 ; 6       ;
+;      - keymodule:keyboard|count_num[31]~0   ; 0                 ; 6       ;
+; pc_clr                                      ;                   ;         ;
+;      - exp5:inst3|pc_function:pf|PC[0]      ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|key_flag   ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|PC[4]      ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|PC[1]      ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|PC[5]      ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|PC[2]      ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|PC[6]      ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|PC[3]      ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|PC[7]      ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt[0]     ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt[1]     ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt[2]     ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt[3]     ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt[4]     ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt[5]     ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt[6]     ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt[7]     ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt[8]     ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt[9]     ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt[10]    ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt[11]    ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt[12]    ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt[13]    ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt[14]    ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt[15]    ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt[16]    ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt[17]    ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt[18]    ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt[19]    ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|state.S2   ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|cnt_full   ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|state.S4   ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|key_tmp0   ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|key_tmp1   ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|state.S1   ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|state.S3   ; 1                 ; 6       ;
+;      - exp5:inst3|pc_function:pf|en_counter ; 1                 ; 6       ;
+; enact                                       ;                   ;         ;
+;      - exp5:inst3|reg_function:rf|R3[4]~0   ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R3[4]~3   ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|Equal1~0  ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R2[4]~3   ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R0~1      ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R0[2]~2   ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R0[2]~3   ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R1[6]~0   ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R1[4]~2   ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R1[4]~3   ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R0~4      ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R0~5      ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R0~6      ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R0~7      ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R0~8      ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R0~9      ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R0~10     ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R2[4]~11  ; 0                 ; 6       ;
+; rd                                          ;                   ;         ;
+;      - exp5:inst3|reg_function:rf|R0[2]~0   ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R3[4]~2   ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R2[4]~3   ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R0[2]~2   ; 0                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R1[4]~2   ; 0                 ; 6       ;
+; wr                                          ;                   ;         ;
+;      - exp5:inst3|reg_function:rf|R0[2]~0   ; 0                 ; 6       ;
+; RA[1]                                       ;                   ;         ;
+;      - exp5:inst3|reg_function:rf|R3[4]~2   ; 1                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R2[4]~3   ; 1                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R0[2]~2   ; 1                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R1[4]~2   ; 1                 ; 6       ;
+; RA[0]                                       ;                   ;         ;
+;      - exp5:inst3|reg_function:rf|R3[4]~2   ; 1                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R2[4]~3   ; 1                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R0[2]~2   ; 1                 ; 6       ;
+;      - exp5:inst3|reg_function:rf|R1[4]~2   ; 1                 ; 6       ;
+; switch_buttons[1]                           ;                   ;         ;
+; switch_buttons[0]                           ;                   ;         ;
+; switch_buttons[2]                           ;                   ;         ;
+; key_r[3]                                    ;                   ;         ;
+;      - keymodule:keyboard|num~0             ; 1                 ; 6       ;
+;      - keymodule:keyboard|Equal0~0          ; 1                 ; 6       ;
+;      - keymodule:keyboard|num~3             ; 1                 ; 6       ;
+;      - keymodule:keyboard|num~8             ; 1                 ; 6       ;
+;      - keymodule:keyboard|num~11            ; 1                 ; 6       ;
+;      - keymodule:keyboard|num~15            ; 1                 ; 6       ;
+;      - keymodule:keyboard|num~18            ; 1                 ; 6       ;
+; key_r[2]                                    ;                   ;         ;
+;      - keymodule:keyboard|num~0             ; 1                 ; 6       ;
+;      - keymodule:keyboard|Equal0~0          ; 1                 ; 6       ;
+;      - keymodule:keyboard|num~3             ; 1                 ; 6       ;
+;      - keymodule:keyboard|num~4             ; 1                 ; 6       ;
+;      - keymodule:keyboard|num~8             ; 1                 ; 6       ;
+;      - keymodule:keyboard|num~10            ; 1                 ; 6       ;
+;      - keymodule:keyboard|num~15            ; 1                 ; 6       ;
+;      - keymodule:keyboard|num~17            ; 1                 ; 6       ;
+;      - keymodule:keyboard|num~18            ; 1                 ; 6       ;
+; key_r[1]                                    ;                   ;         ;
+;      - keymodule:keyboard|num~0             ; 0                 ; 6       ;
+;      - keymodule:keyboard|Equal0~0          ; 0                 ; 6       ;
+;      - keymodule:keyboard|num~3             ; 0                 ; 6       ;
+;      - keymodule:keyboard|num~8             ; 0                 ; 6       ;
+;      - keymodule:keyboard|num~10            ; 0                 ; 6       ;
+;      - keymodule:keyboard|num~14            ; 0                 ; 6       ;
+;      - keymodule:keyboard|num~17            ; 0                 ; 6       ;
+; key_r[0]                                    ;                   ;         ;
+;      - keymodule:keyboard|num~0             ; 1                 ; 6       ;
+;      - keymodule:keyboard|Equal0~0          ; 1                 ; 6       ;
+;      - keymodule:keyboard|num~8             ; 1                 ; 6       ;
+; manual_plus                                 ;                   ;         ;
+;      - exp5:inst3|pc_function:pf|key_tmp0~0 ; 1                 ; 6       ;
++---------------------------------------------+-------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                            ;
-+------------------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
-; Name                               ; Location           ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------------------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
-; clk                                ; PIN_A14            ; 213     ; Clock                   ; yes    ; Global Clock         ; GCLK14           ; --                        ;
-; execute:inst8|S[2]                 ; FF_X39_Y27_N21     ; 8       ; Sync. load              ; no     ; --                   ; --               ; --                        ;
-; execute:inst8|WideNor0             ; LCCOMB_X39_Y27_N18 ; 8       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; exp5:inst1|pc_function:pf|Add1~0   ; LCCOMB_X36_Y26_N0  ; 9       ; Sync. load              ; no     ; --                   ; --               ; --                        ;
-; exp5:inst1|pc_function:pf|PC[1]~26 ; LCCOMB_X36_Y26_N22 ; 8       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; exp5:inst1|reg_function:rf|R0[0]~3 ; LCCOMB_X35_Y27_N0  ; 8       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; exp5:inst1|reg_function:rf|R1[4]~3 ; LCCOMB_X35_Y27_N6  ; 8       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; exp5:inst1|reg_function:rf|R2[4]~3 ; LCCOMB_X35_Y27_N10 ; 8       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; exp5:inst1|reg_function:rf|R3[4]~3 ; LCCOMB_X36_Y27_N2  ; 8       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; key_clr                            ; PIN_AH6            ; 22      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; keymodule:keyboard|count_num[31]~0 ; LCCOMB_X32_Y23_N18 ; 31      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; keymodule:keyboard|out[3]~1        ; LCCOMB_X35_Y23_N6  ; 8       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; page_switch:inst10|N[31]~0         ; LCCOMB_X41_Y28_N30 ; 32      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; page_switch:inst10|status[0]~0     ; LCCOMB_X41_Y28_N20 ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; page_switch:inst10|status[1]       ; FF_X41_Y28_N29     ; 33      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
-; pc_clr                             ; PIN_AF5            ; 8       ; Async. clear            ; no     ; --                   ; --               ; --                        ;
-+------------------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                   ;
++--------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                 ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; clk                                  ; PIN_A14            ; 202     ; Clock        ; yes    ; Global Clock         ; GCLK14           ; --                        ;
+; execute:inst4|S[2]                   ; FF_X28_Y26_N19     ; 8       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; execute:inst4|WideNor0               ; LCCOMB_X28_Y26_N4  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; exp5:inst3|pc_function:pf|en_counter ; FF_X34_Y1_N9       ; 21      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; exp5:inst3|pc_function:pf|key_flag   ; FF_X35_Y1_N1       ; 8       ; Clock        ; yes    ; Global Clock         ; GCLK17           ; --                        ;
+; exp5:inst3|reg_function:rf|R0[2]~3   ; LCCOMB_X28_Y26_N28 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; exp5:inst3|reg_function:rf|R1[4]~3   ; LCCOMB_X28_Y26_N10 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; exp5:inst3|reg_function:rf|R2[4]~11  ; LCCOMB_X27_Y27_N12 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; exp5:inst3|reg_function:rf|R3[4]~3   ; LCCOMB_X27_Y27_N20 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; key_clr                              ; PIN_AH6            ; 22      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; keymodule:keyboard|count_num[31]~0   ; LCCOMB_X33_Y29_N6  ; 31      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; keymodule:keyboard|out[6]~1          ; LCCOMB_X30_Y10_N20 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; page_switch:inst10|N[25]~0           ; LCCOMB_X25_Y27_N30 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; page_switch:inst10|status[0]~0       ; LCCOMB_X33_Y26_N8  ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; page_switch:inst10|status[1]         ; FF_X33_Y26_N11     ; 33      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; pc_clr                               ; PIN_AF5            ; 37      ; Async. clear ; no     ; --                   ; --               ; --                        ;
++--------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                            ;
-+------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Name ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk  ; PIN_A14  ; 213     ; 7                                    ; Global Clock         ; GCLK14           ; --                        ;
-+------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                              ;
++------------------------------------+--------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name                               ; Location     ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++------------------------------------+--------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; clk                                ; PIN_A14      ; 202     ; 2                                    ; Global Clock         ; GCLK14           ; --                        ;
+; exp5:inst3|pc_function:pf|key_flag ; FF_X35_Y1_N1 ; 8       ; 0                                    ; Global Clock         ; GCLK17           ; --                        ;
++------------------------------------+--------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------------------------------+
@@ -1447,62 +1482,60 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------+---------+
 ; Name                                                                                ; Fan-Out ;
 +-------------------------------------------------------------------------------------+---------+
+; pc_clr~input                                                                        ; 37      ;
 ; keymodule:keyboard|num~9                                                            ; 35      ;
 ; keymodule:keyboard|Equal1~0                                                         ; 34      ;
 ; page_switch:inst10|status[1]                                                        ; 33      ;
 ; page_switch:inst10|status[0]                                                        ; 33      ;
-; page_switch:inst10|N[31]~0                                                          ; 32      ;
+; page_switch:inst10|N[25]~0                                                          ; 32      ;
 ; keymodule:keyboard|count_num[31]~0                                                  ; 31      ;
 ; key_clr~input                                                                       ; 22      ;
+; exp5:inst3|pc_function:pf|en_counter                                                ; 21      ;
+; enact~input                                                                         ; 18      ;
+; exp5:inst3|reg_function:rf|R0[2]~0                                                  ; 18      ;
 ; segment_displays:inst2|sel[1]                                                       ; 16      ;
 ; segment_displays:inst2|sel[0]                                                       ; 15      ;
-; execute:inst8|choose_reg[3]                                                         ; 12      ;
-; execute:inst8|choose_reg[2]                                                         ; 12      ;
-; execute:inst8|choose_reg[1]                                                         ; 12      ;
-; execute:inst8|choose_reg[0]                                                         ; 12      ;
+; execute:inst4|choose_reg[1]                                                         ; 12      ;
+; execute:inst4|choose_reg[0]                                                         ; 12      ;
+; execute:inst4|choose_reg[3]                                                         ; 12      ;
+; execute:inst4|choose_reg[2]                                                         ; 12      ;
 ; key_r[2]~input                                                                      ; 9       ;
-; M[0]~input                                                                          ; 9       ;
-; exp5:inst1|pc_function:pf|Add1~0                                                    ; 9       ;
-; rd~input                                                                            ; 8       ;
-; pc_clr~input                                                                        ; 8       ;
-; exp5:inst1|pc_function:pf|PC[1]~26                                                  ; 8       ;
-; execute:inst8|WideNor0                                                              ; 8       ;
-; keymodule:keyboard|out[3]~1                                                         ; 8       ;
-; exp5:inst1|reg_function:rf|R1[4]~3                                                  ; 8       ;
-; exp5:inst1|reg_function:rf|R1[4]~0                                                  ; 8       ;
-; exp5:inst1|reg_function:rf|R0[0]~3                                                  ; 8       ;
-; exp5:inst1|reg_function:rf|R0[3]~0                                                  ; 8       ;
-; exp5:inst1|reg_function:rf|R2[4]~3                                                  ; 8       ;
-; exp5:inst1|reg_function:rf|R2[1]~0                                                  ; 8       ;
-; execute:inst8|S[2]                                                                  ; 8       ;
-; execute:inst8|S[0]                                                                  ; 8       ;
-; exp5:inst1|reg_function:rf|R3[4]~3                                                  ; 8       ;
-; exp5:inst1|reg_function:rf|R3[7]~0                                                  ; 8       ;
-; execute:inst8|res_dest[0]                                                           ; 8       ;
-; execute:inst8|res_dest[1]                                                           ; 8       ;
+; exp5:inst3|reg_function:rf|R2[4]~11                                                 ; 8       ;
+; execute:inst4|WideNor0                                                              ; 8       ;
+; keymodule:keyboard|out[6]~1                                                         ; 8       ;
+; exp5:inst3|pc_function:pf|cnt_full                                                  ; 8       ;
+; exp5:inst3|reg_function:rf|R1[4]~3                                                  ; 8       ;
+; exp5:inst3|reg_function:rf|R1[6]~0                                                  ; 8       ;
+; exp5:inst3|reg_function:rf|R0[2]~3                                                  ; 8       ;
+; exp5:inst3|reg_function:rf|Equal1~0                                                 ; 8       ;
+; execute:inst4|S[2]                                                                  ; 8       ;
+; execute:inst4|S[0]                                                                  ; 8       ;
+; exp5:inst3|reg_function:rf|R3[4]~3                                                  ; 8       ;
+; exp5:inst3|reg_function:rf|R3[4]~0                                                  ; 8       ;
 ; keymodule:keyboard|KEY_C[2]                                                         ; 8       ;
 ; keymodule:keyboard|KEY_C[3]                                                         ; 8       ;
 ; key_r[1]~input                                                                      ; 7       ;
 ; key_r[3]~input                                                                      ; 7       ;
 ; keymodule:keyboard|Equal2~10                                                        ; 7       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Equal0~1                                  ; 7       ;
+; exp5:inst3|pc_function:pf|key_tmp0                                                  ; 7       ;
+; execute:inst4|res_dest[0]                                                           ; 7       ;
+; execute:inst4|res_dest[1]                                                           ; 7       ;
 ; keymodule:keyboard|KEY_C[1]                                                         ; 7       ;
 ; segment_displays:inst2|num[3]                                                       ; 7       ;
 ; segment_displays:inst2|num[2]                                                       ; 7       ;
 ; segment_displays:inst2|num[1]                                                       ; 7       ;
 ; segment_displays:inst2|num[0]                                                       ; 7       ;
-; keymodule:keyboard|out[3]                                                           ; 6       ;
-; keymodule:keyboard|out[2]                                                           ; 6       ;
-; keymodule:keyboard|out[1]                                                           ; 6       ;
-; keymodule:keyboard|out[0]                                                           ; 6       ;
+; exp5:inst3|pc_function:pf|key_tmp1                                                  ; 6       ;
 ; keymodule:keyboard|cnt[0]                                                           ; 6       ;
 ; segment_displays:inst2|sel[2]                                                       ; 6       ;
+; rd~input                                                                            ; 5       ;
 ; keymodule:keyboard|Equal0~0                                                         ; 5       ;
 ; keymodule:keyboard|num~2                                                            ; 5       ;
-; keymodule:keyboard|out[7]                                                           ; 5       ;
-; keymodule:keyboard|out[6]                                                           ; 5       ;
-; keymodule:keyboard|out[5]                                                           ; 5       ;
-; keymodule:keyboard|out[4]                                                           ; 5       ;
+; exp5:inst3|pc_function:pf|state.S4                                                  ; 5       ;
+; keymodule:keyboard|out[3]                                                           ; 5       ;
+; keymodule:keyboard|out[2]                                                           ; 5       ;
+; keymodule:keyboard|out[1]                                                           ; 5       ;
+; keymodule:keyboard|out[0]                                                           ; 5       ;
 ; exp4:inst6|manipulate:man|ans[7]                                                    ; 5       ;
 ; keymodule:keyboard|cnt[1]                                                           ; 5       ;
 ; exp4:inst6|manipulate:man|ans[3]                                                    ; 5       ;
@@ -1512,10 +1545,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; exp4:inst6|manipulate:man|ans[1]                                                    ; 5       ;
 ; exp4:inst6|manipulate:man|ans[4]                                                    ; 5       ;
 ; exp4:inst6|manipulate:man|ans[0]                                                    ; 5       ;
-; RA[1]~input                                                                         ; 4       ;
 ; RA[0]~input                                                                         ; 4       ;
-; wr~input                                                                            ; 4       ;
+; RA[1]~input                                                                         ; 4       ;
+; exp5:inst3|pc_function:pf|nedge~0                                                   ; 4       ;
 ; keymodule:keyboard|count_num[0]                                                     ; 4       ;
+; exp5:inst3|pc_function:pf|state.S2                                                  ; 4       ;
+; keymodule:keyboard|out[7]                                                           ; 4       ;
+; keymodule:keyboard|out[6]                                                           ; 4       ;
+; keymodule:keyboard|out[5]                                                           ; 4       ;
+; keymodule:keyboard|out[4]                                                           ; 4       ;
+; exp4:inst6|midware:mw|X[3]                                                          ; 4       ;
+; exp4:inst6|midware:mw|X[2]                                                          ; 4       ;
+; exp4:inst6|midware:mw|X[6]                                                          ; 4       ;
+; exp4:inst6|midware:mw|X[1]                                                          ; 4       ;
+; exp4:inst6|midware:mw|X[5]                                                          ; 4       ;
+; exp4:inst6|midware:mw|X[4]                                                          ; 4       ;
+; exp5:inst3|pc_function:pf|PC[0]                                                     ; 4       ;
 ; lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_luv:auto_generated|q_a[12] ; 4       ;
 ; lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_luv:auto_generated|q_a[13] ; 4       ;
 ; lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_luv:auto_generated|q_a[14] ; 4       ;
@@ -1523,8 +1568,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; key_r[0]~input                                                                      ; 3       ;
 ; switch_buttons[0]~input                                                             ; 3       ;
 ; switch_buttons[1]~input                                                             ; 3       ;
-; execute:inst8|Equal0~0                                                              ; 3       ;
-; execute:inst8|Equal1~0                                                              ; 3       ;
+; exp5:inst3|pc_function:pf|state.S3                                                  ; 3       ;
+; exp5:inst3|pc_function:pf|state.S1                                                  ; 3       ;
+; execute:inst4|Equal0~0                                                              ; 3       ;
+; execute:inst4|Equal1~0                                                              ; 3       ;
 ; keymodule:keyboard|LessThan0~3                                                      ; 3       ;
 ; keymodule:keyboard|count_num[16]                                                    ; 3       ;
 ; keymodule:keyboard|count_num[15]                                                    ; 3       ;
@@ -1538,69 +1585,60 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; keymodule:keyboard|num~16                                                           ; 3       ;
 ; keymodule:keyboard|num~12                                                           ; 3       ;
 ; keymodule:keyboard|num~6                                                            ; 3       ;
-; exp4:inst6|midware:mw|X[3]                                                          ; 3       ;
-; exp4:inst6|midware:mw|X[6]                                                          ; 3       ;
-; exp4:inst6|midware:mw|X[2]                                                          ; 3       ;
-; exp4:inst6|midware:mw|X[5]                                                          ; 3       ;
-; exp4:inst6|midware:mw|X[4]                                                          ; 3       ;
-; exp4:inst6|midware:mw|X[1]                                                          ; 3       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[16]                        ; 3       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[15]                        ; 3       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[10]                        ; 3       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[9]                         ; 3       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[7]                         ; 3       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[5]                         ; 3       ;
-; exp5:inst1|reg_function:rf|R2[7]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R0[3]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R2[7]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R0[3]                                                    ; 3       ;
 ; exp4:inst6|midware:mw|Y[3]                                                          ; 3       ;
-; exp5:inst1|reg_function:rf|R1[3]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R1[7]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R0[7]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R2[3]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R3[7]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R3[3]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R2[6]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R0[2]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R1[3]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R1[7]                                                    ; 3       ;
+; exp4:inst6|midware:mw|X[7]                                                          ; 3       ;
+; exp5:inst3|reg_function:rf|R0[7]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R2[3]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R3[7]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R3[3]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R2[6]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R0[2]                                                    ; 3       ;
 ; exp4:inst6|midware:mw|Y[2]                                                          ; 3       ;
-; exp5:inst1|reg_function:rf|R1[2]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R1[2]                                                    ; 3       ;
 ; exp4:inst6|midware:mw|Y[6]                                                          ; 3       ;
-; exp5:inst1|reg_function:rf|R1[6]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R0[6]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R2[2]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R3[6]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R3[2]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R2[5]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R0[1]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R1[6]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R0[6]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R2[2]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R3[6]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R3[2]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R2[5]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R0[1]                                                    ; 3       ;
 ; exp4:inst6|midware:mw|Y[1]                                                          ; 3       ;
-; exp5:inst1|reg_function:rf|R1[1]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R1[1]                                                    ; 3       ;
 ; exp4:inst6|midware:mw|Y[5]                                                          ; 3       ;
-; exp5:inst1|reg_function:rf|R1[5]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R0[5]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R2[1]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R3[5]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R3[1]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R2[4]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R0[0]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R1[5]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R0[5]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R2[1]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R3[5]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R3[1]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R2[4]                                                    ; 3       ;
+; exp4:inst6|midware:mw|X[0]                                                          ; 3       ;
+; exp5:inst3|reg_function:rf|R0[0]                                                    ; 3       ;
 ; exp4:inst6|midware:mw|Y[4]                                                          ; 3       ;
-; exp5:inst1|reg_function:rf|R1[4]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R1[4]                                                    ; 3       ;
 ; exp4:inst6|midware:mw|Y[0]                                                          ; 3       ;
-; exp5:inst1|reg_function:rf|R1[0]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R0[4]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R2[0]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R3[4]                                                    ; 3       ;
-; exp5:inst1|reg_function:rf|R3[0]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R1[0]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R0[4]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R2[0]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R3[4]                                                    ; 3       ;
+; exp5:inst3|reg_function:rf|R3[0]                                                    ; 3       ;
 ; keymodule:keyboard|KEY_C[0]                                                         ; 3       ;
-; exp5:inst1|pc_function:pf|PC[7]                                                     ; 3       ;
-; exp5:inst1|pc_function:pf|PC[3]                                                     ; 3       ;
-; exp5:inst1|pc_function:pf|PC[6]                                                     ; 3       ;
-; exp5:inst1|pc_function:pf|PC[2]                                                     ; 3       ;
-; exp5:inst1|pc_function:pf|PC[5]                                                     ; 3       ;
-; exp5:inst1|pc_function:pf|PC[1]                                                     ; 3       ;
+; exp5:inst3|pc_function:pf|PC[7]                                                     ; 3       ;
+; exp5:inst3|pc_function:pf|PC[3]                                                     ; 3       ;
+; exp5:inst3|pc_function:pf|PC[6]                                                     ; 3       ;
+; exp5:inst3|pc_function:pf|PC[2]                                                     ; 3       ;
+; exp5:inst3|pc_function:pf|PC[5]                                                     ; 3       ;
+; exp5:inst3|pc_function:pf|PC[1]                                                     ; 3       ;
 ; lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_luv:auto_generated|q_a[8]  ; 3       ;
 ; lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_luv:auto_generated|q_a[9]  ; 3       ;
-; exp5:inst1|pc_function:pf|PC[4]                                                     ; 3       ;
-; exp5:inst1|pc_function:pf|PC[0]                                                     ; 3       ;
-; M[1]~input                                                                          ; 2       ;
+; exp5:inst3|pc_function:pf|PC[4]                                                     ; 3       ;
+; exp5:inst3|pc_function:pf|pedge                                                     ; 2       ;
+; exp5:inst3|pc_function:pf|Selector5~0                                               ; 2       ;
+; exp5:inst3|pc_function:pf|Selector3~2                                               ; 2       ;
 ; keymodule:keyboard|Equal2~6                                                         ; 2       ;
 ; keymodule:keyboard|count_num[31]                                                    ; 2       ;
 ; keymodule:keyboard|count_num[30]                                                    ; 2       ;
@@ -1628,43 +1666,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; keymodule:keyboard|count_num[3]                                                     ; 2       ;
 ; keymodule:keyboard|count_num[4]                                                     ; 2       ;
 ; keymodule:keyboard|num~3                                                            ; 2       ;
-; exp4:inst6|midware:mw|X[7]                                                          ; 2       ;
-; exp4:inst6|midware:mw|X[0]                                                          ; 2       ;
 ; page_switch:inst10|status[0]~0                                                      ; 2       ;
-; exp5:inst1|pc_function:pf|WideNor0~8                                                ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[31]                        ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[30]                        ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[29]                        ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[28]                        ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[27]                        ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[26]                        ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[25]                        ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[24]                        ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[23]                        ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[22]                        ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[21]                        ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[20]                        ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[19]                        ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[18]                        ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[17]                        ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[14]                        ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[13]                        ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[12]                        ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[11]                        ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[8]                         ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[6]                         ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[0]                         ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[1]                         ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[2]                         ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[3]                         ; 2       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter[4]                         ; 2       ;
 ; exp4:inst6|midware:mw|Y[7]                                                          ; 2       ;
+; exp5:inst3|pc_function:pf|cnt[15]                                                   ; 2       ;
+; exp5:inst3|pc_function:pf|cnt[14]                                                   ; 2       ;
+; exp5:inst3|pc_function:pf|cnt[12]                                                   ; 2       ;
+; exp5:inst3|pc_function:pf|cnt[13]                                                   ; 2       ;
+; exp5:inst3|pc_function:pf|cnt[11]                                                   ; 2       ;
+; exp5:inst3|pc_function:pf|cnt[10]                                                   ; 2       ;
+; exp5:inst3|pc_function:pf|cnt[9]                                                    ; 2       ;
+; exp5:inst3|pc_function:pf|cnt[8]                                                    ; 2       ;
+; exp5:inst3|pc_function:pf|cnt[3]                                                    ; 2       ;
+; exp5:inst3|pc_function:pf|cnt[2]                                                    ; 2       ;
+; exp5:inst3|pc_function:pf|cnt[7]                                                    ; 2       ;
+; exp5:inst3|pc_function:pf|cnt[6]                                                    ; 2       ;
+; exp5:inst3|pc_function:pf|cnt[5]                                                    ; 2       ;
+; exp5:inst3|pc_function:pf|cnt[4]                                                    ; 2       ;
+; exp5:inst3|pc_function:pf|cnt[1]                                                    ; 2       ;
+; exp5:inst3|pc_function:pf|cnt[0]                                                    ; 2       ;
+; exp5:inst3|pc_function:pf|cnt[19]                                                   ; 2       ;
+; exp5:inst3|pc_function:pf|cnt[18]                                                   ; 2       ;
+; exp5:inst3|pc_function:pf|cnt[17]                                                   ; 2       ;
+; exp5:inst3|pc_function:pf|cnt[16]                                                   ; 2       ;
 ; lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_luv:auto_generated|q_a[6]  ; 2       ;
 ; lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_luv:auto_generated|q_a[7]  ; 2       ;
 ; lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_luv:auto_generated|q_a[10] ; 2       ;
 ; lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_luv:auto_generated|q_a[11] ; 2       ;
-; switch_buttons[2]~input                                                             ; 1       ;
 ; manual_plus~input                                                                   ; 1       ;
+; switch_buttons[2]~input                                                             ; 1       ;
+; wr~input                                                                            ; 1       ;
+; exp5:inst3|pc_function:pf|key_tmp0~0                                                ; 1       ;
+; exp5:inst3|pc_function:pf|PC[0]~21                                                  ; 1       ;
 ; keymodule:keyboard|cnt[0]~1                                                         ; 1       ;
 ; segment_displays:inst2|sel[0]~2                                                     ; 1       ;
 ; keymodule:keyboard|Add1~119                                                         ; 1       ;
@@ -1679,24 +1711,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; keymodule:keyboard|Add1~110                                                         ; 1       ;
 ; keymodule:keyboard|Add1~109                                                         ; 1       ;
 ; keymodule:keyboard|Add1~108                                                         ; 1       ;
-; choose_opts:inst7|Mux0~1                                                            ; 1       ;
-; choose_opts:inst7|Mux0~0                                                            ; 1       ;
-; choose_opts:inst7|Mux4~1                                                            ; 1       ;
-; choose_opts:inst7|Mux4~0                                                            ; 1       ;
-; choose_opts:inst7|Mux1~1                                                            ; 1       ;
-; choose_opts:inst7|Mux1~0                                                            ; 1       ;
-; choose_opts:inst7|Mux5~1                                                            ; 1       ;
-; choose_opts:inst7|Mux5~0                                                            ; 1       ;
-; execute:inst8|Selector2~0                                                           ; 1       ;
-; execute:inst8|Selector3~0                                                           ; 1       ;
-; choose_opts:inst7|Mux2~1                                                            ; 1       ;
-; choose_opts:inst7|Mux2~0                                                            ; 1       ;
-; choose_opts:inst7|Mux3~1                                                            ; 1       ;
-; choose_opts:inst7|Mux3~0                                                            ; 1       ;
-; choose_opts:inst7|Mux6~1                                                            ; 1       ;
-; choose_opts:inst7|Mux6~0                                                            ; 1       ;
-; choose_opts:inst7|Mux7~1                                                            ; 1       ;
-; choose_opts:inst7|Mux7~0                                                            ; 1       ;
+; exp5:inst3|pc_function:pf|Selector3~3                                               ; 1       ;
+; exp5:inst3|pc_function:pf|Selector1~2                                               ; 1       ;
+; exp5:inst3|pc_function:pf|Selector1~1                                               ; 1       ;
+; exp5:inst3|pc_function:pf|Selector1~0                                               ; 1       ;
+; exp5:inst3|pc_function:pf|Selector4~1                                               ; 1       ;
+; exp5:inst3|pc_function:pf|Selector4~0                                               ; 1       ;
+; exp5:inst3|pc_function:pf|Selector2~1                                               ; 1       ;
+; exp5:inst3|pc_function:pf|Selector2~0                                               ; 1       ;
+; execute:inst4|Selector2~0                                                           ; 1       ;
+; execute:inst4|Selector3~0                                                           ; 1       ;
 ; keymodule:keyboard|Add1~83                                                          ; 1       ;
 ; keymodule:keyboard|Add1~80                                                          ; 1       ;
 ; keymodule:keyboard|Add1~77                                                          ; 1       ;
@@ -1721,47 +1745,55 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; keymodule:keyboard|Equal2~9                                                         ; 1       ;
 ; keymodule:keyboard|Equal2~8                                                         ; 1       ;
 ; keymodule:keyboard|Equal2~7                                                         ; 1       ;
+; exp5:inst3|pc_function:pf|Selector5~1                                               ; 1       ;
+; exp5:inst3|pc_function:pf|Equal0~6                                                  ; 1       ;
+; exp5:inst3|pc_function:pf|Equal0~5                                                  ; 1       ;
+; exp5:inst3|pc_function:pf|Equal0~4                                                  ; 1       ;
+; exp5:inst3|pc_function:pf|Equal0~3                                                  ; 1       ;
+; exp5:inst3|pc_function:pf|Equal0~2                                                  ; 1       ;
+; exp5:inst3|pc_function:pf|Equal0~1                                                  ; 1       ;
+; exp5:inst3|pc_function:pf|Equal0~0                                                  ; 1       ;
+; choose_opts:inst7|Mux4~1                                                            ; 1       ;
+; choose_opts:inst7|Mux4~0                                                            ; 1       ;
 ; choose_opts:inst7|Mux12~1                                                           ; 1       ;
 ; choose_opts:inst7|Mux12~0                                                           ; 1       ;
 ; choose_opts:inst7|Mux8~1                                                            ; 1       ;
 ; choose_opts:inst7|Mux8~0                                                            ; 1       ;
+; choose_opts:inst7|Mux0~1                                                            ; 1       ;
+; choose_opts:inst7|Mux0~0                                                            ; 1       ;
 ; keymodule:keyboard|out~8                                                            ; 1       ;
 ; keymodule:keyboard|out~7                                                            ; 1       ;
+; choose_opts:inst7|Mux5~1                                                            ; 1       ;
+; choose_opts:inst7|Mux5~0                                                            ; 1       ;
 ; choose_opts:inst7|Mux13~1                                                           ; 1       ;
 ; choose_opts:inst7|Mux13~0                                                           ; 1       ;
 ; choose_opts:inst7|Mux9~1                                                            ; 1       ;
 ; choose_opts:inst7|Mux9~0                                                            ; 1       ;
-; choose_opts:inst7|opt1[7]                                                           ; 1       ;
+; choose_opts:inst7|Mux1~1                                                            ; 1       ;
+; choose_opts:inst7|Mux1~0                                                            ; 1       ;
 ; keymodule:keyboard|out~6                                                            ; 1       ;
-; choose_opts:inst7|opt1[3]                                                           ; 1       ;
 ; keymodule:keyboard|out~5                                                            ; 1       ;
+; choose_opts:inst7|Mux6~1                                                            ; 1       ;
+; choose_opts:inst7|Mux6~0                                                            ; 1       ;
 ; choose_opts:inst7|Mux14~1                                                           ; 1       ;
 ; choose_opts:inst7|Mux14~0                                                           ; 1       ;
 ; choose_opts:inst7|Mux10~1                                                           ; 1       ;
 ; choose_opts:inst7|Mux10~0                                                           ; 1       ;
-; choose_opts:inst7|opt1[6]                                                           ; 1       ;
+; choose_opts:inst7|Mux2~1                                                            ; 1       ;
+; choose_opts:inst7|Mux2~0                                                            ; 1       ;
 ; keymodule:keyboard|out~4                                                            ; 1       ;
-; choose_opts:inst7|opt1[2]                                                           ; 1       ;
 ; keymodule:keyboard|out~3                                                            ; 1       ;
+; choose_opts:inst7|Mux7~1                                                            ; 1       ;
+; choose_opts:inst7|Mux7~0                                                            ; 1       ;
 ; choose_opts:inst7|Mux11~1                                                           ; 1       ;
 ; choose_opts:inst7|Mux11~0                                                           ; 1       ;
 ; choose_opts:inst7|Mux15~1                                                           ; 1       ;
 ; choose_opts:inst7|Mux15~0                                                           ; 1       ;
-; choose_opts:inst7|opt1[5]                                                           ; 1       ;
-; choose_opts:inst7|opt1[4]                                                           ; 1       ;
+; choose_opts:inst7|Mux3~1                                                            ; 1       ;
+; choose_opts:inst7|Mux3~0                                                            ; 1       ;
 ; keymodule:keyboard|out~2                                                            ; 1       ;
-; choose_opts:inst7|opt1[1]                                                           ; 1       ;
-; choose_opts:inst7|opt1[0]                                                           ; 1       ;
-; execute:inst8|Selector5~0                                                           ; 1       ;
-; execute:inst8|Selector4~0                                                           ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter~6                          ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter~5                          ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter~4                          ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter~3                          ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter~2                          ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter~1                          ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|second_counter~0                          ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Equal0~0                                  ; 1       ;
+; execute:inst4|Selector5~0                                                           ; 1       ;
+; execute:inst4|Selector4~0                                                           ; 1       ;
 ; keymodule:keyboard|Equal2~5                                                         ; 1       ;
 ; keymodule:keyboard|Equal2~4                                                         ; 1       ;
 ; keymodule:keyboard|Equal2~3                                                         ; 1       ;
@@ -1788,77 +1820,77 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; keymodule:keyboard|num~1                                                            ; 1       ;
 ; keymodule:keyboard|num~0                                                            ; 1       ;
 ; keymodule:keyboard|num[0]                                                           ; 1       ;
-; exp5:inst1|reg_function:rf|R2~10                                                    ; 1       ;
-; exp5:inst1|reg_function:rf|R0~10                                                    ; 1       ;
+; exp5:inst3|pc_function:pf|Selector0~0                                               ; 1       ;
+; exp5:inst3|reg_function:rf|R2~10                                                    ; 1       ;
+; choose_opts:inst7|opt1[3]                                                           ; 1       ;
+; exp5:inst3|reg_function:rf|R0~10                                                    ; 1       ;
 ; choose_opts:inst7|opt2[3]                                                           ; 1       ;
-; exp5:inst1|reg_function:rf|R1~10                                                    ; 1       ;
+; exp5:inst3|reg_function:rf|R1~10                                                    ; 1       ;
 ; choose_opts:inst7|opt2[7]                                                           ; 1       ;
-; exp5:inst1|reg_function:rf|R1~9                                                     ; 1       ;
-; exp5:inst1|reg_function:rf|R0~9                                                     ; 1       ;
-; exp5:inst1|reg_function:rf|R2~9                                                     ; 1       ;
+; exp5:inst3|reg_function:rf|R1~9                                                     ; 1       ;
+; choose_opts:inst7|opt1[7]                                                           ; 1       ;
+; exp5:inst3|reg_function:rf|R0~9                                                     ; 1       ;
+; exp5:inst3|reg_function:rf|R2~9                                                     ; 1       ;
 ; exp4:inst6|manipulate:man|Mux0~0                                                    ; 1       ;
-; exp5:inst1|reg_function:rf|R3~10                                                    ; 1       ;
+; exp5:inst3|reg_function:rf|R3~10                                                    ; 1       ;
 ; exp4:inst6|manipulate:man|ans~20                                                    ; 1       ;
 ; exp4:inst6|manipulate:man|ans~19                                                    ; 1       ;
-; exp5:inst1|reg_function:rf|R3~9                                                     ; 1       ;
-; exp5:inst1|reg_function:rf|R2~8                                                     ; 1       ;
-; exp5:inst1|reg_function:rf|R0~8                                                     ; 1       ;
+; exp5:inst3|reg_function:rf|R3~9                                                     ; 1       ;
+; exp5:inst3|reg_function:rf|R2~8                                                     ; 1       ;
+; choose_opts:inst7|opt1[2]                                                           ; 1       ;
+; exp5:inst3|reg_function:rf|R0~8                                                     ; 1       ;
 ; choose_opts:inst7|opt2[2]                                                           ; 1       ;
-; exp5:inst1|reg_function:rf|R1~8                                                     ; 1       ;
+; exp5:inst3|reg_function:rf|R1~8                                                     ; 1       ;
 ; choose_opts:inst7|opt2[6]                                                           ; 1       ;
-; exp5:inst1|reg_function:rf|R1~7                                                     ; 1       ;
-; exp5:inst1|reg_function:rf|R0~7                                                     ; 1       ;
-; exp5:inst1|reg_function:rf|R2~7                                                     ; 1       ;
+; exp5:inst3|reg_function:rf|R1~7                                                     ; 1       ;
+; choose_opts:inst7|opt1[6]                                                           ; 1       ;
+; exp5:inst3|reg_function:rf|R0~7                                                     ; 1       ;
+; exp5:inst3|reg_function:rf|R2~7                                                     ; 1       ;
 ; exp4:inst6|manipulate:man|ans~18                                                    ; 1       ;
 ; exp4:inst6|manipulate:man|ans~17                                                    ; 1       ;
-; exp5:inst1|reg_function:rf|R3~8                                                     ; 1       ;
+; exp5:inst3|reg_function:rf|R3~8                                                     ; 1       ;
 ; exp4:inst6|manipulate:man|ans~16                                                    ; 1       ;
 ; exp4:inst6|manipulate:man|ans~15                                                    ; 1       ;
-; exp5:inst1|reg_function:rf|R3~7                                                     ; 1       ;
-; exp5:inst1|reg_function:rf|R2~6                                                     ; 1       ;
-; exp5:inst1|reg_function:rf|R0~6                                                     ; 1       ;
+; exp5:inst3|reg_function:rf|R3~7                                                     ; 1       ;
+; exp5:inst3|reg_function:rf|R2~6                                                     ; 1       ;
+; choose_opts:inst7|opt1[1]                                                           ; 1       ;
+; exp5:inst3|reg_function:rf|R0~6                                                     ; 1       ;
 ; choose_opts:inst7|opt2[1]                                                           ; 1       ;
-; exp5:inst1|reg_function:rf|R1~6                                                     ; 1       ;
+; exp5:inst3|reg_function:rf|R1~6                                                     ; 1       ;
 ; choose_opts:inst7|opt2[5]                                                           ; 1       ;
-; exp5:inst1|reg_function:rf|R1~5                                                     ; 1       ;
-; exp5:inst1|reg_function:rf|R0~5                                                     ; 1       ;
-; exp5:inst1|reg_function:rf|R2~5                                                     ; 1       ;
+; exp5:inst3|reg_function:rf|R1~5                                                     ; 1       ;
+; choose_opts:inst7|opt1[5]                                                           ; 1       ;
+; exp5:inst3|reg_function:rf|R0~5                                                     ; 1       ;
+; exp5:inst3|reg_function:rf|R2~5                                                     ; 1       ;
 ; exp4:inst6|manipulate:man|ans~14                                                    ; 1       ;
 ; exp4:inst6|manipulate:man|ans~13                                                    ; 1       ;
-; exp5:inst1|reg_function:rf|R3~6                                                     ; 1       ;
+; exp5:inst3|reg_function:rf|R3~6                                                     ; 1       ;
 ; exp4:inst6|manipulate:man|ans~12                                                    ; 1       ;
 ; exp4:inst6|manipulate:man|ans~11                                                    ; 1       ;
-; exp5:inst1|reg_function:rf|R3~5                                                     ; 1       ;
-; exp5:inst1|reg_function:rf|R2~4                                                     ; 1       ;
-; exp5:inst1|reg_function:rf|R0~4                                                     ; 1       ;
+; exp5:inst3|reg_function:rf|R3~5                                                     ; 1       ;
+; exp5:inst3|reg_function:rf|R2~4                                                     ; 1       ;
+; choose_opts:inst7|opt1[0]                                                           ; 1       ;
+; exp5:inst3|reg_function:rf|R0~4                                                     ; 1       ;
 ; choose_opts:inst7|opt2[4]                                                           ; 1       ;
-; exp5:inst1|reg_function:rf|R1~4                                                     ; 1       ;
+; exp5:inst3|reg_function:rf|R1~4                                                     ; 1       ;
 ; choose_opts:inst7|opt2[0]                                                           ; 1       ;
-; exp5:inst1|reg_function:rf|R1[4]~2                                                  ; 1       ;
-; exp5:inst1|reg_function:rf|R1~1                                                     ; 1       ;
-; exp5:inst1|reg_function:rf|R0[0]~2                                                  ; 1       ;
-; exp5:inst1|reg_function:rf|R0~1                                                     ; 1       ;
-; exp5:inst1|reg_function:rf|R2[4]~2                                                  ; 1       ;
-; exp5:inst1|reg_function:rf|R2~1                                                     ; 1       ;
+; exp5:inst3|reg_function:rf|R1[4]~2                                                  ; 1       ;
+; exp5:inst3|reg_function:rf|R1~1                                                     ; 1       ;
+; choose_opts:inst7|opt1[4]                                                           ; 1       ;
+; exp5:inst3|reg_function:rf|R0[2]~2                                                  ; 1       ;
+; exp5:inst3|reg_function:rf|R0~1                                                     ; 1       ;
+; exp5:inst3|reg_function:rf|R2[4]~3                                                  ; 1       ;
+; exp5:inst3|reg_function:rf|R2~2                                                     ; 1       ;
 ; exp4:inst6|manipulate:man|ans~10                                                    ; 1       ;
 ; exp4:inst6|manipulate:man|ans~9                                                     ; 1       ;
-; exp5:inst1|reg_function:rf|R3~4                                                     ; 1       ;
+; exp5:inst3|reg_function:rf|R3~4                                                     ; 1       ;
 ; page_switch:inst10|status[0]~1                                                      ; 1       ;
 ; exp4:inst6|manipulate:man|ans~8                                                     ; 1       ;
 ; exp4:inst6|manipulate:man|ans~7                                                     ; 1       ;
 ; page_switch:inst10|Mux1~0                                                           ; 1       ;
-; exp5:inst1|reg_function:rf|R3[4]~2                                                  ; 1       ;
-; exp5:inst1|reg_function:rf|R3~1                                                     ; 1       ;
-; exp5:inst1|pc_function:pf|WideNor0                                                  ; 1       ;
-; exp5:inst1|pc_function:pf|WideNor0~9                                                ; 1       ;
-; exp5:inst1|pc_function:pf|WideNor0~7                                                ; 1       ;
-; exp5:inst1|pc_function:pf|WideNor0~6                                                ; 1       ;
-; exp5:inst1|pc_function:pf|WideNor0~5                                                ; 1       ;
-; exp5:inst1|pc_function:pf|WideNor0~4                                                ; 1       ;
-; exp5:inst1|pc_function:pf|WideNor0~3                                                ; 1       ;
-; exp5:inst1|pc_function:pf|WideNor0~2                                                ; 1       ;
-; exp5:inst1|pc_function:pf|WideNor0~1                                                ; 1       ;
-; exp5:inst1|pc_function:pf|WideNor0~0                                                ; 1       ;
+; exp5:inst3|reg_function:rf|R3[4]~2                                                  ; 1       ;
+; exp5:inst3|reg_function:rf|R3~1                                                     ; 1       ;
+; exp5:inst3|pc_function:pf|key_flag                                                  ; 1       ;
 ; keymodule:keyboard|cnt[1]~0                                                         ; 1       ;
 ; page_switch:inst10|Mux18~0                                                          ; 1       ;
 ; page_switch:inst10|Mux6~0                                                           ; 1       ;
@@ -1933,6 +1965,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; segment_displays:inst2|WideOr2~0                                                    ; 1       ;
 ; segment_displays:inst2|WideOr1~0                                                    ; 1       ;
 ; segment_displays:inst2|WideOr0~0                                                    ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[19]~58                                                ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[18]~57                                                ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[18]~56                                                ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[17]~55                                                ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[17]~54                                                ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[16]~53                                                ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[16]~52                                                ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[15]~51                                                ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[15]~50                                                ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[14]~49                                                ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[14]~48                                                ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[13]~47                                                ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[13]~46                                                ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[12]~45                                                ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[12]~44                                                ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[11]~43                                                ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[11]~42                                                ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[10]~41                                                ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[10]~40                                                ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[9]~39                                                 ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[9]~38                                                 ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[8]~37                                                 ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[8]~36                                                 ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[7]~35                                                 ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[7]~34                                                 ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[6]~33                                                 ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[6]~32                                                 ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[5]~31                                                 ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[5]~30                                                 ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[4]~29                                                 ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[4]~28                                                 ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[3]~27                                                 ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[3]~26                                                 ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[2]~25                                                 ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[2]~24                                                 ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[1]~23                                                 ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[1]~22                                                 ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[0]~21                                                 ; 1       ;
+; exp5:inst3|pc_function:pf|cnt[0]~20                                                 ; 1       ;
 ; keymodule:keyboard|Add1~106                                                         ; 1       ;
 ; keymodule:keyboard|Add1~105                                                         ; 1       ;
 ; keymodule:keyboard|Add1~104                                                         ; 1       ;
@@ -1996,91 +2067,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; keymodule:keyboard|Add1~26                                                          ; 1       ;
 ; keymodule:keyboard|Add1~25                                                          ; 1       ;
 ; keymodule:keyboard|Add1~24                                                          ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~62                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~61                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~60                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~59                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~58                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~57                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~56                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~55                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~54                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~53                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~52                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~51                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~50                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~49                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~48                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~47                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~46                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~45                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~44                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~43                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~42                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~41                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~40                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~39                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~38                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~37                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~36                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~35                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~34                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~33                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~32                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~31                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~30                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~29                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~28                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~27                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~26                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~25                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~24                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~23                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~22                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~21                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~20                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~19                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~18                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~17                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~16                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~15                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~14                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~13                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~12                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~11                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~10                                   ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~9                                    ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~8                                    ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~7                                    ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~6                                    ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~5                                    ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~4                                    ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~3                                    ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~2                                    ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~1                                    ; 1       ;
-; exp5:inst1|pc_function:pf|count_second:cs|Add0~0                                    ; 1       ;
-; exp5:inst1|pc_function:pf|PC[7]~24                                                  ; 1       ;
+; exp5:inst3|pc_function:pf|PC[7]~19                                                  ; 1       ;
 ; exp4:inst6|manipulate:man|ans[3]~6                                                  ; 1       ;
 ; exp4:inst6|manipulate:man|ans[6]~5                                                  ; 1       ;
-; exp5:inst1|pc_function:pf|PC[6]~23                                                  ; 1       ;
-; exp5:inst1|pc_function:pf|PC[6]~22                                                  ; 1       ;
+; exp5:inst3|pc_function:pf|PC[6]~18                                                  ; 1       ;
+; exp5:inst3|pc_function:pf|PC[6]~17                                                  ; 1       ;
 ; exp4:inst6|manipulate:man|ans[2]~4                                                  ; 1       ;
 ; exp4:inst6|manipulate:man|ans[5]~3                                                  ; 1       ;
-; exp5:inst1|pc_function:pf|PC[5]~21                                                  ; 1       ;
-; exp5:inst1|pc_function:pf|PC[5]~20                                                  ; 1       ;
+; exp5:inst3|pc_function:pf|PC[5]~16                                                  ; 1       ;
+; exp5:inst3|pc_function:pf|PC[5]~15                                                  ; 1       ;
 ; exp4:inst6|manipulate:man|ans[1]~2                                                  ; 1       ;
 ; exp4:inst6|manipulate:man|ans[4]~1                                                  ; 1       ;
-; exp5:inst1|pc_function:pf|PC[4]~19                                                  ; 1       ;
-; exp5:inst1|pc_function:pf|PC[4]~18                                                  ; 1       ;
-; exp5:inst1|pc_function:pf|PC[3]~17                                                  ; 1       ;
-; exp5:inst1|pc_function:pf|PC[3]~16                                                  ; 1       ;
-; exp5:inst1|pc_function:pf|PC[2]~15                                                  ; 1       ;
-; exp5:inst1|pc_function:pf|PC[2]~14                                                  ; 1       ;
-; exp5:inst1|pc_function:pf|PC[1]~13                                                  ; 1       ;
-; exp5:inst1|pc_function:pf|PC[1]~12                                                  ; 1       ;
+; exp5:inst3|pc_function:pf|PC[4]~14                                                  ; 1       ;
+; exp5:inst3|pc_function:pf|PC[4]~13                                                  ; 1       ;
+; exp5:inst3|pc_function:pf|PC[3]~12                                                  ; 1       ;
+; exp5:inst3|pc_function:pf|PC[3]~11                                                  ; 1       ;
+; exp5:inst3|pc_function:pf|PC[2]~10                                                  ; 1       ;
+; exp5:inst3|pc_function:pf|PC[2]~9                                                   ; 1       ;
+; exp5:inst3|pc_function:pf|PC[1]~8                                                   ; 1       ;
+; exp5:inst3|pc_function:pf|PC[1]~7                                                   ; 1       ;
 ; exp4:inst6|manipulate:man|ans[0]~0                                                  ; 1       ;
-; exp5:inst1|pc_function:pf|PC[0]~11                                                  ; 1       ;
-; exp5:inst1|pc_function:pf|PC[0]~10                                                  ; 1       ;
 ; lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_luv:auto_generated|q_a[1]  ; 1       ;
 ; lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_luv:auto_generated|q_a[2]  ; 1       ;
 ; lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_luv:auto_generated|q_a[3]  ; 1       ;
@@ -2119,7 +2125,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+---------+----------------+----------------------+-----------------+-----------------+---------------+
 ; Name                                                                                   ; Type ; Mode ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF     ; Location       ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ; Fits in MLABs ;
 +----------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+---------+----------------+----------------------+-----------------+-----------------+---------------+
-; lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_luv:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; Single Clock ; 256          ; 16           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 4096 ; 256                         ; 16                          ; --                          ; --                          ; 4096                ; 1    ; mem.mif ; M9K_X40_Y27_N0 ; Don't care           ; Old data        ; Old data        ; No - Unknown  ;
+; lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_luv:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; Single Clock ; 256          ; 16           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 4096 ; 256                         ; 16                          ; --                          ; --                          ; 4096                ; 1    ; mem.mif ; M9K_X24_Y26_N0 ; Don't care           ; Old data        ; Old data        ; No - Unknown  ;
 +----------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+---------+----------------+----------------------+-----------------+-----------------+---------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -2130,7 +2136,7 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ;   Addr   ;              +0              ;              +1              ;              +2              ;              +3              ;              +4              ;              +5              ;              +6              ;              +7              ;
 +----------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
-;0;(0111000110000000) (70600) (29056) (7180)    ;(1000001100000000) (101400) (33536) (8300)   ;(0111001101000000) (71500) (29504) (7340)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
+;0;(0111011000000000) (73000) (30208) (7600)    ;(1000001100000000) (101400) (33536) (8300)   ;(0111001101000000) (71500) (29504) (7340)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
 ;8;(0000000000000000) (0) (0) (00)    ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
 ;16;(0000000000000000) (0) (0) (00)    ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
 ;24;(0000000000000000) (0) (0) (00)    ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
@@ -2169,116 +2175,118 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 496 / 116,715 ( < 1 % ) ;
-; C16 interconnects     ; 31 / 3,886 ( < 1 % )    ;
-; C4 interconnects      ; 198 / 73,752 ( < 1 % )  ;
-; Direct links          ; 140 / 116,715 ( < 1 % ) ;
-; Global clocks         ; 1 / 20 ( 5 % )          ;
-; Local interconnects   ; 202 / 39,600 ( < 1 % )  ;
-; R24 interconnects     ; 26 / 3,777 ( < 1 % )    ;
-; R4 interconnects      ; 229 / 99,858 ( < 1 % )  ;
+; Block interconnects   ; 487 / 116,715 ( < 1 % ) ;
+; C16 interconnects     ; 39 / 3,886 ( 1 % )      ;
+; C4 interconnects      ; 202 / 73,752 ( < 1 % )  ;
+; Direct links          ; 103 / 116,715 ( < 1 % ) ;
+; Global clocks         ; 2 / 20 ( 10 % )         ;
+; Local interconnects   ; 179 / 39,600 ( < 1 % )  ;
+; R24 interconnects     ; 28 / 3,777 ( < 1 % )    ;
+; R4 interconnects      ; 284 / 99,858 ( < 1 % )  ;
 +-----------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 11.53) ; Number of LABs  (Total = 32) ;
+; Number of Logic Elements  (Average = 11.52) ; Number of LABs  (Total = 31) ;
 +---------------------------------------------+------------------------------+
 ; 1                                           ; 1                            ;
 ; 2                                           ; 1                            ;
 ; 3                                           ; 3                            ;
-; 4                                           ; 2                            ;
-; 5                                           ; 1                            ;
-; 6                                           ; 0                            ;
+; 4                                           ; 0                            ;
+; 5                                           ; 3                            ;
+; 6                                           ; 1                            ;
 ; 7                                           ; 1                            ;
 ; 8                                           ; 0                            ;
 ; 9                                           ; 0                            ;
-; 10                                          ; 2                            ;
-; 11                                          ; 1                            ;
-; 12                                          ; 1                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 0                            ;
+; 12                                          ; 2                            ;
 ; 13                                          ; 2                            ;
 ; 14                                          ; 1                            ;
-; 15                                          ; 2                            ;
-; 16                                          ; 14                           ;
+; 15                                          ; 3                            ;
+; 16                                          ; 13                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.53) ; Number of LABs  (Total = 32) ;
+; LAB-wide Signals  (Average = 1.84) ; Number of LABs  (Total = 31) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 1                            ;
-; 1 Clock                            ; 28                           ;
-; 1 Clock enable                     ; 11                           ;
-; 1 Sync. clear                      ; 1                            ;
-; 1 Sync. load                       ; 5                            ;
-; 2 Clock enables                    ; 3                            ;
+; 1 Async. clear                     ; 5                            ;
+; 1 Clock                            ; 27                           ;
+; 1 Clock enable                     ; 12                           ;
+; 1 Sync. clear                      ; 2                            ;
+; 1 Sync. load                       ; 8                            ;
+; 2 Clock enables                    ; 2                            ;
+; 2 Clocks                           ; 1                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 18.16) ; Number of LABs  (Total = 32) ;
+; Number of Signals Sourced  (Average = 18.23) ; Number of LABs  (Total = 31) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 1                            ;
-; 3                                            ; 0                            ;
-; 4                                            ; 5                            ;
-; 5                                            ; 0                            ;
-; 6                                            ; 1                            ;
+; 3                                            ; 1                            ;
+; 4                                            ; 1                            ;
+; 5                                            ; 1                            ;
+; 6                                            ; 2                            ;
 ; 7                                            ; 1                            ;
 ; 8                                            ; 1                            ;
-; 9                                            ; 0                            ;
-; 10                                           ; 0                            ;
+; 9                                            ; 1                            ;
+; 10                                           ; 1                            ;
 ; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
 ; 14                                           ; 0                            ;
 ; 15                                           ; 0                            ;
-; 16                                           ; 3                            ;
-; 17                                           ; 1                            ;
-; 18                                           ; 1                            ;
+; 16                                           ; 2                            ;
+; 17                                           ; 0                            ;
+; 18                                           ; 0                            ;
 ; 19                                           ; 0                            ;
-; 20                                           ; 1                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 3                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 1                            ;
-; 25                                           ; 1                            ;
-; 26                                           ; 2                            ;
+; 20                                           ; 2                            ;
+; 21                                           ; 2                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 6                            ;
+; 24                                           ; 0                            ;
+; 25                                           ; 2                            ;
+; 26                                           ; 0                            ;
 ; 27                                           ; 3                            ;
-; 28                                           ; 4                            ;
+; 28                                           ; 1                            ;
 ; 29                                           ; 0                            ;
-; 30                                           ; 0                            ;
-; 31                                           ; 1                            ;
+; 30                                           ; 1                            ;
+; 31                                           ; 0                            ;
+; 32                                           ; 2                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 8.91) ; Number of LABs  (Total = 32) ;
+; Number of Signals Sourced Out  (Average = 8.39) ; Number of LABs  (Total = 31) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
 ; 1                                               ; 2                            ;
-; 2                                               ; 2                            ;
-; 3                                               ; 2                            ;
-; 4                                               ; 2                            ;
-; 5                                               ; 1                            ;
-; 6                                               ; 1                            ;
-; 7                                               ; 3                            ;
-; 8                                               ; 5                            ;
-; 9                                               ; 1                            ;
-; 10                                              ; 1                            ;
+; 2                                               ; 1                            ;
+; 3                                               ; 5                            ;
+; 4                                               ; 1                            ;
+; 5                                               ; 3                            ;
+; 6                                               ; 2                            ;
+; 7                                               ; 1                            ;
+; 8                                               ; 2                            ;
+; 9                                               ; 0                            ;
+; 10                                              ; 3                            ;
 ; 11                                              ; 1                            ;
-; 12                                              ; 1                            ;
+; 12                                              ; 2                            ;
 ; 13                                              ; 2                            ;
-; 14                                              ; 1                            ;
-; 15                                              ; 1                            ;
+; 14                                              ; 0                            ;
+; 15                                              ; 0                            ;
 ; 16                                              ; 6                            ;
 +-------------------------------------------------+------------------------------+
 
@@ -2286,41 +2294,42 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 14.94) ; Number of LABs  (Total = 32) ;
+; Number of Distinct Inputs  (Average = 14.61) ; Number of LABs  (Total = 31) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 1                            ;
-; 3                                            ; 3                            ;
-; 4                                            ; 1                            ;
-; 5                                            ; 0                            ;
-; 6                                            ; 4                            ;
+; 2                                            ; 0                            ;
+; 3                                            ; 2                            ;
+; 4                                            ; 3                            ;
+; 5                                            ; 1                            ;
+; 6                                            ; 2                            ;
 ; 7                                            ; 2                            ;
-; 8                                            ; 0                            ;
-; 9                                            ; 0                            ;
+; 8                                            ; 2                            ;
+; 9                                            ; 1                            ;
 ; 10                                           ; 1                            ;
 ; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
-; 13                                           ; 0                            ;
-; 14                                           ; 3                            ;
-; 15                                           ; 1                            ;
-; 16                                           ; 2                            ;
-; 17                                           ; 2                            ;
-; 18                                           ; 1                            ;
-; 19                                           ; 2                            ;
-; 20                                           ; 1                            ;
+; 13                                           ; 2                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 0                            ;
+; 16                                           ; 1                            ;
+; 17                                           ; 1                            ;
+; 18                                           ; 2                            ;
+; 19                                           ; 1                            ;
+; 20                                           ; 0                            ;
 ; 21                                           ; 1                            ;
-; 22                                           ; 1                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 0                            ;
-; 25                                           ; 0                            ;
-; 26                                           ; 0                            ;
-; 27                                           ; 1                            ;
+; 22                                           ; 3                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 1                            ;
+; 25                                           ; 1                            ;
+; 26                                           ; 1                            ;
+; 27                                           ; 0                            ;
 ; 28                                           ; 0                            ;
-; 29                                           ; 1                            ;
-; 30                                           ; 0                            ;
-; 31                                           ; 2                            ;
-; 32                                           ; 1                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 2                            ;
+; 31                                           ; 0                            ;
+; 32                                           ; 0                            ;
+; 33                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -2381,9 +2390,9 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 ; Pin/Rules          ; IO_000001 ; IO_000002    ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Total Pass         ; 33        ; 0            ; 33        ; 0            ; 0            ; 33        ; 33        ; 0            ; 33        ; 33        ; 0            ; 15           ; 0            ; 0            ; 18           ; 0            ; 15           ; 18           ; 0            ; 0            ; 0            ; 15           ; 0            ; 0            ; 0            ; 0            ; 0            ; 33        ; 0            ; 0            ;
+; Total Pass         ; 34        ; 0            ; 34        ; 0            ; 0            ; 34        ; 34        ; 0            ; 34        ; 34        ; 0            ; 15           ; 0            ; 0            ; 19           ; 0            ; 15           ; 19           ; 0            ; 0            ; 0            ; 15           ; 0            ; 0            ; 0            ; 0            ; 0            ; 34        ; 0            ; 0            ;
 ; Total Unchecked    ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 0         ; 33           ; 0         ; 33           ; 33           ; 0         ; 0         ; 33           ; 0         ; 0         ; 33           ; 18           ; 33           ; 33           ; 15           ; 33           ; 18           ; 15           ; 33           ; 33           ; 33           ; 18           ; 33           ; 33           ; 33           ; 33           ; 33           ; 0         ; 33           ; 33           ;
+; Total Inapplicable ; 0         ; 34           ; 0         ; 34           ; 34           ; 0         ; 0         ; 34           ; 0         ; 0         ; 34           ; 19           ; 34           ; 34           ; 15           ; 34           ; 19           ; 15           ; 34           ; 34           ; 34           ; 19           ; 34           ; 34           ; 34           ; 34           ; 34           ; 0         ; 34           ; 34           ;
 ; Total Fail         ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
 ; codeout[7]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; codeout[6]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -2394,6 +2403,8 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 ; codeout[1]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; codeout[0]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; cin                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; M[1]               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; M[0]               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; key_c[3]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; key_c[2]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; key_c[1]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -2403,14 +2414,12 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 ; sel[0]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; clk                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; key_clr            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; M[1]               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; M[0]               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; pc_clr             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; manual_plus        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; wr                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; enact              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; rd                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; RA[0]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; wr                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; RA[1]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; RA[0]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; switch_buttons[1]  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; switch_buttons[0]  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; switch_buttons[2]  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -2418,6 +2427,7 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 ; key_r[2]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; key_r[1]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; key_r[0]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; manual_plus        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
 
@@ -2458,6 +2468,39 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +---------------------------+--------+
 
 
++-------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary                                 ;
++------------------------------------+----------------------+-------------------+
+; Source Clock(s)                    ; Destination Clock(s) ; Delay Added in ns ;
++------------------------------------+----------------------+-------------------+
+; exp5:inst3|pc_function:pf|key_flag ; clk                  ; 3.6               ;
+; clk                                ; clk                  ; 2.5               ;
++------------------------------------+----------------------+-------------------+
+Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
+This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
+
+
++---------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                               ;
++------------------------------------+------------------------------------+-------------------+
+; Source Register                    ; Destination Register               ; Delay Added in ns ;
++------------------------------------+------------------------------------+-------------------+
+; exp5:inst3|pc_function:pf|key_flag ; exp5:inst3|pc_function:pf|key_flag ; 2.476             ;
+; exp5:inst3|pc_function:pf|state.S2 ; exp5:inst3|pc_function:pf|key_flag ; 1.238             ;
+; exp5:inst3|pc_function:pf|cnt_full ; exp5:inst3|pc_function:pf|key_flag ; 1.238             ;
+; exp5:inst3|pc_function:pf|state.S4 ; exp5:inst3|pc_function:pf|key_flag ; 1.238             ;
+; exp5:inst3|pc_function:pf|PC[3]    ; segment_displays:inst2|num[0]      ; 0.434             ;
+; exp5:inst3|pc_function:pf|PC[2]    ; segment_displays:inst2|num[0]      ; 0.434             ;
+; exp5:inst3|pc_function:pf|PC[6]    ; segment_displays:inst2|num[0]      ; 0.432             ;
+; exp5:inst3|pc_function:pf|PC[5]    ; segment_displays:inst2|num[0]      ; 0.432             ;
+; exp5:inst3|pc_function:pf|PC[4]    ; segment_displays:inst2|num[0]      ; 0.432             ;
+; exp5:inst3|pc_function:pf|PC[1]    ; segment_displays:inst2|num[0]      ; 0.432             ;
+; exp5:inst3|pc_function:pf|PC[7]    ; segment_displays:inst2|num[0]      ; 0.432             ;
+; exp5:inst3|pc_function:pf|PC[0]    ; segment_displays:inst2|num[0]      ; 0.176             ;
++------------------------------------+------------------------------------+-------------------+
+Note: This table only shows the top 12 path(s) that have the largest delay added for hold.
+
+
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
@@ -2482,37 +2525,41 @@ Info (176045): Design uses memory blocks. Violating setup or hold times of memor
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'exp8.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176353): Automatically promoted node clk~input (placed in PIN A14 (CLK10, DIFFCLK_4n))
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G14
+Info (176353): Automatically promoted node exp5:inst3|pc_function:pf|key_flag 
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node exp5:inst3|pc_function:pf|Selector0~0
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:06
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (170189): Fitter placement preparation operations beginning
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:05
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 3% of the available device resources in the region that extends from location X34_Y22 to location X44_Y32
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:05
+    Info (170196): Router estimated peak interconnect usage is 3% of the available device resources in the region that extends from location X22_Y22 to location X33_Y32
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.36 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.13 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:03
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Computer_Organization/exp8/output_files/exp8.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 5431 megabytes
-    Info: Processing ended: Mon May 29 10:25:30 2023
-    Info: Elapsed time: 00:00:32
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Peak virtual memory: 5427 megabytes
+    Info: Processing ended: Wed May 31 09:21:02 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +----------------------------+

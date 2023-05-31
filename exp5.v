@@ -9,6 +9,7 @@ module exp5(
 	input [7:0] key_out,
 	input [7:0] res_alu,
 	input [1:0] res_dest,
+	input enact,
 	output [7:0] R0,
 	output [7:0] R1,
 	output [7:0] R2,
@@ -17,7 +18,6 @@ module exp5(
 );
 	wire [7:0] DATA_INPUT;
 	assign DATA_INPUT=key_out;
-	wire [7:0] X,Y;
-	pc_function pf  (clk,clr,manual_plus,DATA_INPUT,M,PC);
-	reg_function rf (clk,wr,rd,RA,DATA_INPUT,R0,R1,R2,R3,X,res_alu,res_dest);
+	pc_function pf  (clk,clr,manual_plus,PC);
+	reg_function rf (clk,wr,rd,RA,DATA_INPUT,R0,R1,R2,R3,res_alu,res_dest,enact);
 endmodule

@@ -1,15 +1,15 @@
-Fitter Status : Successful - Mon May 29 10:25:29 2023
+Fitter Status : Successful - Wed May 31 09:21:01 2023
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
 Revision Name : exp8
 Top-level Entity Name : exp8
 Family : Cyclone III
 Device : EP3C40F780C8
 Timing Models : Final
-Total logic elements : 369 / 39,600 ( < 1 % )
-    Total combinational functions : 351 / 39,600 ( < 1 % )
-    Dedicated logic registers : 212 / 39,600 ( < 1 % )
-Total registers : 212
-Total pins : 33 / 536 ( 6 % )
+Total logic elements : 357 / 39,600 ( < 1 % )
+    Total combinational functions : 339 / 39,600 ( < 1 % )
+    Dedicated logic registers : 209 / 39,600 ( < 1 % )
+Total registers : 209
+Total pins : 34 / 536 ( 6 % )
 Total virtual pins : 0
 Total memory bits : 4,096 / 1,161,216 ( < 1 % )
 Embedded Multiplier 9-bit elements : 0 / 252 ( 0 % )
